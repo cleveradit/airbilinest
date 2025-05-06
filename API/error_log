@@ -1,0 +1,5 @@
+[09-Mar-2025 21:46:50 Asia/Jakarta] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/airj1347/public_html/API/login.php:1) in /home/airj1347/public_html/API/login.php on line 3
+[09-Mar-2025 21:47:09 Asia/Jakarta] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/airj1347/public_html/API/login.php:1) in /home/airj1347/public_html/API/login.php on line 3
+[09-Mar-2025 21:48:10 Asia/Jakarta] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/airj1347/public_html/API/login.php:1) in /home/airj1347/public_html/API/login.php on line 3
+[09-Mar-2025 21:51:00 Asia/Jakarta] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/airj1347/public_html/API/login.php:1) in /home/airj1347/public_html/API/login.php on line 3
+[09-Mar-2025 21:51:00 Asia/Jakarta] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/airj1347/public_html/API/login.php:1) in /home/airj1347/public_html/API/login.php on line 3

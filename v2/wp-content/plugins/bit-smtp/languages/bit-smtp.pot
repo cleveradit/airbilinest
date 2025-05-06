@@ -1,0 +1,65 @@
+# Copyright (C) 2025 Bit Apps
+# This file is distributed under the GPLv2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: BIT SMTP 1.1.9\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/bit-smtp\n"
+"Last-Translator: developer@bitcode.pro\n"
+"Language-Team: support@bitapps.pro\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2025-01-31T13:03:34+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.11.0\n"
+"X-Domain: bit-smtp\n"
+
+#. Plugin Name of the plugin
+#: bit_smtp.php
+msgid "BIT SMTP"
+msgstr ""
+
+#. Plugin URI of the plugin
+#: bit_smtp.php
+msgid "https://www.bitapps.pro/bit-smtp"
+msgstr ""
+
+#. Description of the plugin
+#: bit_smtp.php
+msgid "Send email via SMTP using BIT SMTP plugin by Bit Apps"
+msgstr ""
+
+#. Author of the plugin
+#: bit_smtp.php
+msgid "Bit Apps"
+msgstr ""
+
+#. Author URI of the plugin
+#: bit_smtp.php
+msgid "https://bitapps.pro"
+msgstr ""
+
+#: backend/app/Config.php:177
+msgid "Home"
+msgstr ""
+
+#: backend/app/Config.php:209
+#: backend/app/Config.php:210
+msgid "Bit SMTP"
+msgstr ""
+
+#: languages/generatedString.php:4
+msgid "404"
+msgstr ""
+
+#: languages/generatedString.php:6
+msgid "Lost In Space"
+msgstr ""
+
+#: languages/generatedString.php:8
+msgid "Redirecting Home in"
+msgstr ""
+
+#: languages/generatedString.php:10
+msgid "Go Home"
+msgstr ""

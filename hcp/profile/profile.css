@@ -1,0 +1,371 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #fff;
+    display: flex;
+}
+
+header {
+    position: fixed;
+    display: flex;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Ensure it's on top of other content */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow effect */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-right: 20px;
+    padding-bottom: 8px;
+    background-color: #fff;
+}
+
+
+/* === HEADER === */
+.logo img {
+    width: 140px;
+}
+
+.navbar a {
+    text-decoration: none;
+    padding: 10px 15px;
+    display: inline-block;
+}
+
+
+.navbar {
+    display: flex;
+    gap: 20px;
+}
+
+/* Hide the navbar on mobile view */
+.menu-toggle {
+    display: none;
+    font-size: 26px;
+    margin-top: 15px;
+    background: none;
+    border: none;
+    color: black;
+}
+
+
+.navbar a {
+    text-decoration: none;
+    color: #003060;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #F97FAF; /* Change to pink on hover */
+}
+
+
+
+/* Popup styling */
+.popup {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    max-width: 400px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.popup-title {
+    font-size: 20px;
+}
+
+.popup-button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    background-color: #007BFF;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.popup-button:hover {
+    background-color: #0056b3;
+}
+
+/* ==== ISI ===== */
+.container {
+    display: flex;
+    width: 100%;
+    height: 100vh; /* Memenuhi tinggi layar */
+}
+
+/* === USRER === */
+.user_profile{
+    width: 270px;
+    padding: 20px;
+    padding-top: 120px;
+    background-color: #f9f9f9;
+    text-align: center;
+    border-right: 1px solid #ddd;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    position: sticky; /* Tetap di tempat saat di-scroll */
+    top: 0; /* Tetap di bagian atas */
+    height: 100vh; /* Memenuhi tinggi layar */
+    overflow-y: hidden; /* Tidak bisa di-scroll */
+    transition: transform 0.3s ease; /* Animasi saat toggle */
+}
+.username{
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 8px;
+}
+.user_profile p{
+    text-align: left;
+}
+
+/* === Edit Pasword === */
+.user_btn {
+    background-color: #007bff ;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+.user_btn:hover {
+    background-color: #0056b3;
+}
+
+/* === Log out button === */
+.logout-button {
+    background-color: #ff5e00;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+.logout-button:hover {
+    background-color: #cb4a00;
+}
+
+.confirm-logout{
+    display: none; 
+    position: fixed; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    background: white; 
+    padding: 35px; 
+    border-radius: 8px; 
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.1);
+}
+
+.delete-account-button {
+    background-color: #ff0000 ;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+.delete-account-button:hover {
+    background-color: #9c0000;
+}
+
+.button-div{
+    display: grid;
+    grid-template-columns: 50% auto;
+}
+.confirm-div{
+    text-align: center;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+.confirm-button {
+    display: block;
+    background-color: #007bff;
+    color: #f0f0f0;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+.confirm-button:hover {
+    background-color: #0056b3;
+}
+
+/* BAGIAN KANAN */
+.right-container {
+    flex: 1;
+    padding: 20px;
+    padding-top: 120px;
+    overflow-y: auto; /* Bisa di-scroll */
+    height: 100vh; /* Memenuhi tinggi layar */
+}
+.right-container h1 {
+    margin-top: 0;
+    font-size: 24px;
+    color: #333;
+}
+.right-container p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* === download button === */
+.download_btn {
+    background-color: #007bff ;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    width: 50%;
+    transition: background-color 0.3s ease;
+}
+
+.user_btn:hover {
+    background-color: #0056b3;
+}
+
+/* Tombol Toggle untuk Mobile */
+.toggle-button {
+    display: none; /* Sembunyikan tombol di desktop */
+    position: fixed;
+    top: 85px;
+    left: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1000; /* Pastikan tombol di atas elemen lain */
+}
+
+/* MOBILE STYLES (Responsive) */
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    /* === NAVBAR === */
+    .logo img {
+        width: 100px;
+    }
+    .navbar {
+        display: none; /* Hide initially on mobile */
+        width: 100%; 
+        justify-content: center;
+        flex-direction: column; /* Stacked by default on mobile */
+    }
+
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+    }
+
+    /* Show the navbar in a row when toggled */
+    .navbar.active {
+        display: flex; /* Display flex when active */
+        flex-wrap: wrap; /* Allow wrapping of items */
+        justify-content: center;
+        gap: 10px; /* Adds space between items */
+    }
+
+    .navbar a {
+        padding: 10px;
+        text-align: center;
+        color: #003060;
+        font-weight: bold;
+    }
+
+    /* ISI */
+    .user_profile {
+        position: fixed; /* Sidebar di mobile menjadi fixed */
+        transform: translateX(-100%); /* Sembunyikan sidebar */
+        z-index: 999; /* Pastikan sidebar di atas konten */
+        padding-top: 170px;
+        transition: transform 0.3s ease; /* Animasi saat toggle */
+    }
+    .user_profile.active {
+        transform: translateX(0); /* Tampilkan sidebar */
+    }
+    .toggle-button {
+        display: block; /* Tampilkan tombol di mobile */
+    }
+
+    /* === Edit Pasword === */
+    .user_btn {
+        background-color: #007BFF;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        font-size: 1em;
+        cursor: pointer;
+        width: 100%;
+        transition: background-color 0.3s ease;
+    }
+
+
+    /* === Log out button === */
+    .logout-button {
+        background-color: #ff5e00;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        font-size: 1em;
+        cursor: pointer;
+        width: 100%;
+        transition: background-color 0.3s ease;
+    }
+    
+
+}

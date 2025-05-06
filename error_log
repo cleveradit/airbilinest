@@ -1,0 +1,19 @@
+[15-Feb-2025 18:00:40 Asia/Jakarta] PHP Warning:  require_once(/lang/en.php): failed to open stream: No such file or directory in /home/airj1347/public_html/index.php on line 14
+[15-Feb-2025 18:00:40 Asia/Jakarta] PHP Fatal error:  require_once(): Failed opening required '/lang/en.php' (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home/airj1347/public_html/index.php on line 14
+[15-Feb-2025 18:00:42 Asia/Jakarta] PHP Warning:  require_once(/lang/en.php): failed to open stream: No such file or directory in /home/airj1347/public_html/index.php on line 14
+[15-Feb-2025 18:00:42 Asia/Jakarta] PHP Fatal error:  require_once(): Failed opening required '/lang/en.php' (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home/airj1347/public_html/index.php on line 14
+[15-Feb-2025 18:00:44 Asia/Jakarta] PHP Warning:  require_once(/lang/en.php): failed to open stream: No such file or directory in /home/airj1347/public_html/index.php on line 14
+[15-Feb-2025 18:00:44 Asia/Jakarta] PHP Fatal error:  require_once(): Failed opening required '/lang/en.php' (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home/airj1347/public_html/index.php on line 14
+[15-Feb-2025 18:00:48 Asia/Jakarta] PHP Warning:  require_once(/lang/en.php): failed to open stream: No such file or directory in /home/airj1347/public_html/index.php on line 14
+[15-Feb-2025 18:00:48 Asia/Jakarta] PHP Fatal error:  require_once(): Failed opening required '/lang/en.php' (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home/airj1347/public_html/index.php on line 14
+[15-Feb-2025 18:01:11 Asia/Jakarta] PHP Warning:  require_once(/lang/en.php): failed to open stream: No such file or directory in /home/airj1347/public_html/index.php on line 14
+[15-Feb-2025 18:01:11 Asia/Jakarta] PHP Fatal error:  require_once(): Failed opening required '/lang/en.php' (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home/airj1347/public_html/index.php on line 14
+[07-Apr-2025 20:49:33 Asia/Jakarta] PHP Warning:  include(lang/'.php): failed to open stream: No such file or directory in /home/airj1347/public_html/index.php on line 19
+[07-Apr-2025 20:49:33 Asia/Jakarta] PHP Warning:  include(lang/'.php): failed to open stream: No such file or directory in /home/airj1347/public_html/index.php on line 19
+[07-Apr-2025 20:49:33 Asia/Jakarta] PHP Warning:  include(): Failed opening 'lang/'.php' for inclusion (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home/airj1347/public_html/index.php on line 19
+[07-Apr-2025 20:49:33 Asia/Jakarta] PHP Warning:  include(lang/'.php): failed to open stream: No such file or directory in /home/airj1347/public_html/index.php on line 19
+[07-Apr-2025 20:49:33 Asia/Jakarta] PHP Warning:  include(lang/'.php): failed to open stream: No such file or directory in /home/airj1347/public_html/index.php on line 19
+[07-Apr-2025 20:49:33 Asia/Jakarta] PHP Warning:  include(): Failed opening 'lang/'.php' for inclusion (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home/airj1347/public_html/index.php on line 19
+[07-Apr-2025 20:49:34 Asia/Jakarta] PHP Warning:  include(lang/en'.php): failed to open stream: No such file or directory in /home/airj1347/public_html/index.php on line 19
+[07-Apr-2025 20:49:34 Asia/Jakarta] PHP Warning:  include(lang/en'.php): failed to open stream: No such file or directory in /home/airj1347/public_html/index.php on line 19
+[07-Apr-2025 20:49:34 Asia/Jakarta] PHP Warning:  include(): Failed opening 'lang/en'.php' for inclusion (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home/airj1347/public_html/index.php on line 19

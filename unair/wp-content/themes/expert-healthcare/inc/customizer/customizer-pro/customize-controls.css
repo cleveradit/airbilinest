@@ -1,0 +1,37 @@
+.control-section-expert-healthcare h3 {
+	margin: 0;
+	padding: 1px 0;
+	border: 0;
+	position: relative;
+}
+.control-section-expert-healthcare h3 a {
+	background: #fff;
+	display: block;
+	text-decoration: none;
+}
+li#accordion-section-expert-healthcare a {
+    background: none #f46f74;
+    border-color: #f46f74;
+    box-shadow: none;
+    clear: both;
+    color: #fff;
+    display: block;
+    font-size: 24px;
+    font-weight: 500;
+    height: auto;
+    margin: 7px 0 0;
+    padding: 7px 14px;
+    text-align: center;
+    text-transform: uppercase;
+}
+#accordion-section-themes+.control-section {
+    margin-bottom: 17px;
+}
+
+img.expert-healthcare-selector-img{
+    margin-right: 8px;
+}
+
+img.expert-healthcare-selected-img{
+    border: 2px solid #2271b1;
+}

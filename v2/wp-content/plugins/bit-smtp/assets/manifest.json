@@ -1,0 +1,86 @@
+{
+  "_antd-c6d11e90.js": {
+    "file": "antd-c6d11e90.js",
+    "imports": [
+      "_react-vendor-45e3acfb.js",
+      "_react-8e143969.js"
+    ]
+  },
+  "_react-8e143969.js": {
+    "file": "@emotion/react-8e143969.js",
+    "imports": [
+      "_react-vendor-45e3acfb.js"
+    ]
+  },
+  "_react-query-89d20436.js": {
+    "file": "@tanstack/react-query-89d20436.js",
+    "imports": [
+      "_react-vendor-45e3acfb.js"
+    ]
+  },
+  "_react-query-devtools-89d20436.js": {
+    "file": "@tanstack/react-query-devtools-89d20436.js",
+    "imports": [
+      "_react-vendor-45e3acfb.js"
+    ]
+  },
+  "_react-router-dom-b25d2b38.js": {
+    "file": "react-router-dom-b25d2b38.js",
+    "imports": [
+      "_react-vendor-45e3acfb.js"
+    ]
+  },
+  "_react-vendor-45e3acfb.js": {
+    "file": "react-vendor-45e3acfb.js"
+  },
+  "main.css": {
+    "file": "main-.css",
+    "src": "main.css"
+  },
+  "main.tsx": {
+    "assets": [
+      "bf-320-4.svg",
+      "bf-589-5.png",
+      "bf-925-0.svg",
+      "bf-424-1.svg",
+      "bf-109-2.svg",
+      "bf-976-3.svg"
+    ],
+    "css": [
+      "main-.css"
+    ],
+    "file": "main-.js",
+    "imports": [
+      "_react-vendor-45e3acfb.js",
+      "_react-8e143969.js",
+      "_react-router-dom-b25d2b38.js",
+      "_antd-c6d11e90.js"
+    ],
+    "isEntry": true,
+    "src": "main.tsx"
+  },
+  "resource/img/bitAssist.svg": {
+    "file": "bf-925-0.svg",
+    "src": "resource/img/bitAssist.svg"
+  },
+  "resource/img/bitFileManager.svg": {
+    "file": "bf-424-1.svg",
+    "src": "resource/img/bitFileManager.svg"
+  },
+  "resource/img/bitForm.svg": {
+    "file": "bf-109-2.svg",
+    "src": "resource/img/bitForm.svg"
+  },
+  "resource/img/bitIntegrations.svg": {
+    "file": "bf-976-3.svg",
+    "src": "resource/img/bitIntegrations.svg"
+  },
+  "resource/img/bitSmtpLogo.svg": {
+    "file": "bf-320-4.svg",
+    "src": "resource/img/bitSmtpLogo.svg"
+  },
+  "resource/img/exclusiveEarlyBirdOffer.png": {
+    "file": "bf-589-5.png",
+    "src": "resource/img/exclusiveEarlyBirdOffer.png"
+  }
+}

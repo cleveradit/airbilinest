@@ -1,0 +1,313 @@
+/*
+Theme Name: Healthcare Medicine
+Template: online-pharmacy
+Text Domain: healthcare-medicine
+Author: ThemesPride
+Author URI: https://www.themespride.com/
+Theme URI: https://www.themespride.com/products/free-healthcare-wordpress-theme
+License: GNU General Public License v3 or later
+License URI: http://www.gnu.org/licenses/gpl-3.0.html
+Description: Healthcare Medicine is a theme for drugstores, healthcare, medical, medical shop, apothecary, Health Education, Medical Ethics, Chronic Disease Management, Healthcare Startups, Medical Supply Chain, Health Risk Management, Emergency Medicine, Pediatric Healthcare, Oncology Services, Cardiovascular Health, Diabetes Care, Rehabilitation Services vitamin and supplements store & supplement products websites. Anyone related to this business can use the theme. This theme will help you create an online presence to promote your medical supplies & medicine business. The features of this theme are amazing, with stunning looks. It is easy to use and includes all the features you need to grow your business website. It is responsive, well-structured, and well-organized. It provides excellent customer service. It is compatible with Woocommerce and contains SEO-friendly codes to help your website rank higher in SERPs. The theme is also SEO-friendly in code and design. After purchase, you will receive excellent one-year customer support. The healthcare medicine theme includes many sections that outline the services you can offer your customer. Google Maps can be used to show your location to customers who are unable to find you offline. Different sections like testimonial section. Team section, custom sections with an attractive and striking design. The theme is responsive, multipurpose, and fully customizable. It is also responsive and mobile-friendly across all platforms and browsers. Customers will not be disappointed by our theme’s high performance.
+Tags: wide-blocks, block-styles, one-column, two-columns, right-sidebar, left-sidebar, three-columns, four-columns, grid-layout, custom-colors, custom-header, custom-background, custom-menu, custom-logo, editor-style, featured-images, featured-image-header, footer-widgets, full-width-template, sticky-post, theme-options, threaded-comments, e-commerce, food-and-drink, education
+Version: 3.7
+Tested up to: 6.7
+Requires PHP: 5.6
+Requires at least: 5.0
+*/
+
+h1,h2,h3,h4,h5,h6,.main-navigation a{
+  font-family: 'Poppins', sans-serif;
+}
+
+#main-content a,.box-content p a,.box-content h1 a,.box-content h2 a,.box-content h3 a.box-content h4 a,.box-content h5 a,.box-content h6 a,.box-content li a{
+  text-decoration: underline;
+}
+
+/* COLOR CSS */
+#footer h1.wp-block-heading, .wp-block-search .wp-block-search__label, #footer h3.wp-block-heading,#footer h4.wp-block-heading, #footer h5.wp-block-heading, #footer h6.wp-block-heading ,
+#theme-sidebar h3, #theme-sidebar h1.wp-block-heading, #theme-sidebar h2.wp-block-heading, #theme-sidebar h3.wp-block-heading,#theme-sidebar h4.wp-block-heading, #theme-sidebar h5.wp-block-heading, #theme-sidebar h6.wp-block-heading, .search-box i,.main-navigation a:hover,.headerbox i,.box-content a, #theme-sidebar .textwidget a, #footer .textwidget a, .comment-body a, .entry-content a, .entry-summary a,a.page-numbers:hover,#theme-sidebar h3,.main-navigation .current_page_item > a, .main-navigation .current-menu-item > a, .main-navigation .current_page_ancestor > a,.headerbox i:hover, .headerbox i:hover:after,#about h3,#about p i{
+    color: #283b6a;
+}
+.next.page-numbers:hover, .page-numbers:hover,.wc-block-cart__submit-container a:hover,.top-header,.prev.page-numbers, .next.page-numbers,.page-numbers,span.meta-nav,#slider .carousel-control-prev-icon:hover, #slider .carousel-control-next-icon:hover,nav.woocommerce-MyAccount-navigation ul li:hover,#footer,#theme-sidebar button[type="submit"]:hover, #footer button[type="submit"]:hover, #comments input[type="submit"]:hover, span.meta-nav:hover,.woocommerce #respond input#submit:hover, .woocommerce a.button:hover, .woocommerce button.button:hover, .woocommerce input.button:hover, .woocommerce #respond input#submit.alt:hover, .woocommerce a.button.alt:hover, .woocommerce button.button.alt:hover, .woocommerce input.button.alt:hover,.book-tkt-btn a:hover, .more-btn a:hover,.main-navigation ul ul{
+  background: #283b6a;
+}
+#footer .wp-calendar-table th, #theme-sidebar .wp-calendar-table th{
+  background-color: #21cdc0;
+  color: #fff;
+  border-color: #21cdc0;
+}
+.readmore-btn a,a:hover,.main-navigation a:hover,#theme-sidebar h3,#theme-sidebar .textwidget a, #footer .textwidget a, .comment-body a, .entry-content a, .entry-summary a,h1, h2, h3, h4, h5, h6,.logo h1 a,.main-navigation a,.box-info i{
+  color: #283b6a;
+}
+#footer .tagcloud a:hover,#theme-sidebar .widget_tag_cloud a:hover,.readmore-btn a:hover{
+  border-color: #21cdc0;
+}
+.readmore-btn a{
+  border-color: #283b6a;
+}
+
+#footer li a:hover,a,a.added_to_cart.wc-forward,.readmore-btn a:hover,.site-info a:hover,#theme-sidebar a:hover,.media-links i:hover, .top-header a:hover,.main-navigation .current_page_item > a, .main-navigation .current-menu-item > a, .main-navigation .current_page_ancestor > a {
+  color: #21cdc0;
+}
+.media-links i,nav.woocommerce-MyAccount-navigation ul li:hover a,.book-tkt-btn a:hover, .more-btn a:hover{
+  color: #fff;
+}
+.next.page-numbers, .page-numbers,.woocommerce ul.products li.product .onsale, .woocommerce span.onsale,.wc-block-cart__submit-container a,.wc-block-checkout__actions_row .wc-block-components-checkout-place-order-button,.book-tkt-btn a,.more-btn a,.woocommerce #respond input#submit, .woocommerce a.button, .woocommerce button.button, .woocommerce input.button, .woocommerce #respond input#submit.alt, .woocommerce a.button.alt, .woocommerce button.button.alt, .woocommerce input.button.alt,.site-info,#comments input[type="submit"],#theme-sidebar button[type="submit"], #footer button[type="submit"],button[type="submit"]{
+  background: #21cdc0;
+}
+#footer .tagcloud a:hover,#footer p.wp-block-tag-cloud a:hover,#theme-sidebar .tagcloud a:hover{
+  color: #21cdc0;
+  border-color: #21cdc0;
+}
+#theme-sidebar .wp-block-media-text {
+  box-sizing: border-box;
+  direction: ltr;
+  display: inline;
+  grid-template-columns: 50% 1fr;
+  grid-template-rows: auto;
+}
+#theme-sidebar .wp-block-search .wp-block-search__label:before,#theme-sidebar h3:before, #theme-sidebar h1.wp-block-heading:before, #theme-sidebar h2.wp-block-heading:before, #theme-sidebar h3.wp-block-heading:before,#theme-sidebar h4.wp-block-heading:before, #theme-sidebar h5.wp-block-heading:before, #theme-sidebar h6.wp-block-heading:before {
+  background-color: #21cdc0;
+}
+.page-box,#theme-sidebar section{
+  border-left-color: #21cdc0;
+  border-bottom-color: #21cdc0;
+}
+/* SLIDER CSS */
+
+.top-header {
+  text-align: right;
+}
+.header-search form{
+  border: none;
+}
+.header-search {
+  background: #fff;
+  border-radius: 30px;
+}
+.header-search input[type="search"] {
+  padding: 6px 10px;
+}
+.header-search [type="submit"] {
+  background: url(assets/images/search.png) no-repeat scroll 0 8px;
+}
+.headerbox,.page-template-front-page .headerbox {
+  background: #edf2f6;
+}
+
+#slider .inner_carousel h1 a {
+  font-size: 45px;
+  margin-bottom: 20px;
+}
+#slider .inner_carousel h1 a:hover, .logo h1 a:hover, .logo p a:hover{
+  color: #21cdc0;
+}
+#slider .inner_carousel p{
+  color: #fff;
+}
+#slider .carousel-control-next {
+  left: 85%;
+}
+#slider .carousel-control-prev {
+  right: auto;
+}
+#slider .carousel-control-next, #slider .carousel-control-prev {
+  width: 15%;
+  top: 50%;
+  bottom: auto;
+  transform: translateY(-50%);
+}
+.call-info {
+  display: none;
+}
+.more-btn a{
+  font-size: 15px;
+  font-weight: 600;
+  display: inline-block;
+  padding: 12px 25px;
+  color: #fff;
+  border-radius: 30px;
+}
+#slider img {
+  opacity: 0.5;
+  height: 600px;
+  width: 100%;
+  object-fit: cover;
+}
+#slider:before{
+  content: none;
+}
+#slider{
+  background-color: #96c9c9;
+}
+/* FEATURED PRODUCTS CSS */
+
+.featured-review__stars .fas{
+  color: #ffc107;
+}
+#abt-product .star-rating {
+  overflow: hidden;
+  position: relative;
+  height: 1em;
+  line-height: 1;
+  font-size: 1em;
+  width: 5.4em;
+  font-family: star;
+  color: #fdce38;
+}
+#abt-product .star-rating::before {
+  content: "\73\73\73\73\73";
+  color: #d3ced2;
+  float: left;
+  top: 0;
+  left: 0;
+  position: absolute;
+}
+#abt-product .star-rating span::before {
+  content: "\53\53\53\53\53";
+  top: 0;
+  position: absolute;
+  left: 0;
+}
+#abt-product .star-rating span {
+  overflow: hidden;
+  float: left;
+  top: 0;
+  left: 0;
+  position: absolute;
+  padding-top: 1.5em;
+}
+.product-content {
+  background: #283b6a;
+  padding: 5px 10px;
+}
+.product-content h3 a {
+  color: #fff;
+}
+.product-content h3 {
+  text-align: left;
+  font-size: 15px;
+}
+.product-content span.woocommerce-Price-amount {
+  color: #fff;
+  font-weight: 700;
+  font-size: 14px;
+}
+#abt-product h2 {
+  overflow: hidden;
+  text-align: center;
+  font-size: 35px;
+}
+.woocommerce ul.products li.product .button, a.checkout-button.button.alt.wc-forward,#theme-sidebar button[type="submit"], #footer button[type="submit"] {
+  border-radius: 30px;
+}
+
+.site-info a:hover{
+  color: #fff;
+}
+.product-content span.woocommerce-Price-amount{
+    display: block !important;
+  }
+
+/* OTHER CSS */
+
+.bypostauthor > .comment-body > .comment-meta > .comment-author .avatar {
+  border: 1px solid #333;
+  padding: 2px;
+}
+.aligncenter,
+div.aligncenter {
+  display: block;
+  margin: 5px auto 5px auto;
+}
+.screen-reader-text {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  word-wrap: normal !important;
+}
+.screen-reader-text:focus {
+  background-color: #eee;
+  clip: auto !important;
+  clip-path: none;
+  color: #444;
+  display: block;
+  font-size: 1em;
+  height: auto;
+  left: 5px;
+  line-height: normal;
+  padding: 15px 23px 14px;
+  text-decoration: none;
+  top: 5px;
+  width: auto;
+  z-index: 100000; /* Above WP toolbar. */
+}
+
+@media screen and (max-width: 767px){
+  #slider .inner_carousel h1 a {
+    font-size: 16px;
+    text-align: center;
+  }
+  .more-btn {
+    margin: 10px 0;
+  }
+  .more-btn a{
+    font-size: 11px;
+  }
+  #slider .carousel-control-prev-icon, #slider .carousel-control-next-icon{
+    background: transparent;
+    color: #21cdc0;
+  }
+  #slider .carousel-control-prev-icon:hover, #slider .carousel-control-next-icon:hover{
+    background: transparent;
+    color: #283b6a;
+  }
+  .media-links{
+    letter-spacing: -1px;
+  }
+  #slider img{
+    height: 300px;
+  }
+}
+
+@media screen and (max-width: 1000px){
+  .top-header{
+    text-align: center;
+  }
+  .logo{
+    text-align: left;
+  }
+  .toggle-nav button {
+    font-size: 30px;
+    background: none;
+    padding: 0px 10px;
+  }
+  .sidenav{
+    background: #283b6a;
+  }
+  .media-links{
+    letter-spacing: -1px;
+  }
+  .sidenav .closebtn i{
+    color: #fff;
+  } 
+  .header-search{
+    margin-bottom: 10px !important;
+  }
+
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1199px){
+  .media-links{
+    letter-spacing: -4px;
+  }
+  .top-header span{
+    font-size: 12px;
+  }
+}

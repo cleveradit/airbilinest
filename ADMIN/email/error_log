@@ -1,0 +1,6 @@
+[23-Feb-2025 18:45:36 Asia/Jakarta] PHP Warning:  require(../PHPMailer/src/Exception.php): failed to open stream: No such file or directory in /home/airj1347/public_html/ADMIN/email/send_email.php on line 5
+[23-Feb-2025 18:45:36 Asia/Jakarta] PHP Warning:  require(../PHPMailer/src/Exception.php): failed to open stream: No such file or directory in /home/airj1347/public_html/ADMIN/email/send_email.php on line 5
+[23-Feb-2025 18:45:36 Asia/Jakarta] PHP Fatal error:  require(): Failed opening required '../PHPMailer/src/Exception.php' (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home/airj1347/public_html/ADMIN/email/send_email.php on line 5
+[23-Feb-2025 18:46:26 Asia/Jakarta] PHP Warning:  require(../PHPMailer/src/Exception.php): failed to open stream: No such file or directory in /home/airj1347/public_html/ADMIN/email/send_email.php on line 5
+[23-Feb-2025 18:46:26 Asia/Jakarta] PHP Warning:  require(../PHPMailer/src/Exception.php): failed to open stream: No such file or directory in /home/airj1347/public_html/ADMIN/email/send_email.php on line 5
+[23-Feb-2025 18:46:26 Asia/Jakarta] PHP Fatal error:  require(): Failed opening required '../PHPMailer/src/Exception.php' (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home/airj1347/public_html/ADMIN/email/send_email.php on line 5

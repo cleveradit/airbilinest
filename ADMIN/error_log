@@ -1,0 +1,39 @@
+[23-Feb-2025 17:09:48 Asia/Jakarta] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'airj1347_airbilinest_HCP.admins' doesn't exist in /home/airj1347/public_html/ADMIN/includes/auth.php:36
+Stack trace:
+#0 /home/airj1347/public_html/ADMIN/includes/auth.php(36): PDO->prepare('SELECT id, pass...')
+#1 /home/airj1347/public_html/ADMIN/index.php(9): login('Valentinus.Aaro...', '123123123')
+#2 {main}
+  thrown in /home/airj1347/public_html/ADMIN/includes/auth.php on line 36
+[23-Feb-2025 17:11:06 Asia/Jakarta] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'airj1347_airbilinest_HCP.admins' doesn't exist in /home/airj1347/public_html/ADMIN/includes/auth.php:36
+Stack trace:
+#0 /home/airj1347/public_html/ADMIN/includes/auth.php(36): PDO->prepare('SELECT id, pass...')
+#1 /home/airj1347/public_html/ADMIN/index.php(9): login('admin', 'admin_123')
+#2 {main}
+  thrown in /home/airj1347/public_html/ADMIN/includes/auth.php on line 36
+[23-Feb-2025 18:03:51 Asia/Jakarta] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/airj1347/public_html/ADMIN/index.php:10) in /home/airj1347/public_html/ADMIN/index.php on line 13
+[23-Feb-2025 18:05:04 Asia/Jakarta] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/airj1347/public_html/ADMIN/index.php:10) in /home/airj1347/public_html/ADMIN/index.php on line 13
+[23-Feb-2025 18:06:47 Asia/Jakarta] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/airj1347/public_html/ADMIN/index.php:10) in /home/airj1347/public_html/ADMIN/index.php on line 13
+[23-Feb-2025 18:10:08 Asia/Jakarta] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/airj1347/public_html/ADMIN/index.php:10) in /home/airj1347/public_html/ADMIN/index.php on line 13
+[23-Feb-2025 18:12:36 Asia/Jakarta] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/airj1347/public_html/ADMIN/includes/auth.php:24) in /home/airj1347/public_html/ADMIN/index.php on line 11
+[23-Feb-2025 18:28:31 Asia/Jakarta] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/airj1347/public_html/ADMIN/includes/auth.php:24) in /home/airj1347/public_html/ADMIN/index.php on line 11
+[23-Feb-2025 18:34:30 Asia/Jakarta] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/airj1347/public_html/ADMIN/includes/auth.php:24) in /home/airj1347/public_html/ADMIN/index.php on line 11
+[23-Feb-2025 18:35:07 Asia/Jakarta] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/airj1347/public_html/ADMIN/includes/auth.php:24) in /home/airj1347/public_html/ADMIN/index.php on line 11
+[23-Feb-2025 18:35:10 Asia/Jakarta] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/airj1347/public_html/ADMIN/includes/auth.php:24) in /home/airj1347/public_html/ADMIN/index.php on line 11
+[23-Feb-2025 18:35:12 Asia/Jakarta] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/airj1347/public_html/ADMIN/includes/auth.php:24) in /home/airj1347/public_html/ADMIN/index.php on line 11
+[23-Feb-2025 18:38:38 Asia/Jakarta] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/airj1347/public_html/ADMIN/includes/auth.php:24) in /home/airj1347/public_html/ADMIN/index.php on line 11
+[23-Mar-2025 15:10:17 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in /home/airj1347/public_html/ADMIN/admin-dashboard.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/airj1347/public_html/ADMIN/admin-dashboard.php on line 13
+[23-Mar-2025 15:10:18 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in /home/airj1347/public_html/ADMIN/admin-dashboard.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/airj1347/public_html/ADMIN/admin-dashboard.php on line 13
+[23-Mar-2025 15:10:19 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in /home/airj1347/public_html/ADMIN/admin-dashboard.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/airj1347/public_html/ADMIN/admin-dashboard.php on line 13
+[23-Mar-2025 15:10:19 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in /home/airj1347/public_html/ADMIN/admin-dashboard.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/airj1347/public_html/ADMIN/admin-dashboard.php on line 13

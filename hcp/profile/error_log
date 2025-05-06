@@ -1,0 +1,21 @@
+[13-Feb-2025 22:07:19 Asia/Jakarta] PHP Warning:  include(includes/db.php): failed to open stream: No such file or directory in /home/airj1347/public_html/hcp/profile/profile.php on line 8
+[13-Feb-2025 22:07:19 Asia/Jakarta] PHP Warning:  include(includes/db.php): failed to open stream: No such file or directory in /home/airj1347/public_html/hcp/profile/profile.php on line 8
+[13-Feb-2025 22:07:19 Asia/Jakarta] PHP Warning:  include(): Failed opening 'includes/db.php' for inclusion (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home/airj1347/public_html/hcp/profile/profile.php on line 8
+[13-Feb-2025 22:07:19 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in /home/airj1347/public_html/hcp/profile/profile.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/airj1347/public_html/hcp/profile/profile.php on line 12
+[13-Feb-2025 22:07:22 Asia/Jakarta] PHP Warning:  include(includes/db.php): failed to open stream: No such file or directory in /home/airj1347/public_html/hcp/profile/profile.php on line 8
+[13-Feb-2025 22:07:22 Asia/Jakarta] PHP Warning:  include(includes/db.php): failed to open stream: No such file or directory in /home/airj1347/public_html/hcp/profile/profile.php on line 8
+[13-Feb-2025 22:07:22 Asia/Jakarta] PHP Warning:  include(): Failed opening 'includes/db.php' for inclusion (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home/airj1347/public_html/hcp/profile/profile.php on line 8
+[13-Feb-2025 22:07:22 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in /home/airj1347/public_html/hcp/profile/profile.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/airj1347/public_html/hcp/profile/profile.php on line 12
+[13-Feb-2025 22:07:29 Asia/Jakarta] PHP Warning:  include(includes/db.php): failed to open stream: No such file or directory in /home/airj1347/public_html/hcp/profile/profile.php on line 8
+[13-Feb-2025 22:07:29 Asia/Jakarta] PHP Warning:  include(includes/db.php): failed to open stream: No such file or directory in /home/airj1347/public_html/hcp/profile/profile.php on line 8
+[13-Feb-2025 22:07:29 Asia/Jakarta] PHP Warning:  include(): Failed opening 'includes/db.php' for inclusion (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home/airj1347/public_html/hcp/profile/profile.php on line 8
+[13-Feb-2025 22:07:29 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in /home/airj1347/public_html/hcp/profile/profile.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/airj1347/public_html/hcp/profile/profile.php on line 12

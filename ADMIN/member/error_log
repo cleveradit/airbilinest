@@ -1,0 +1,333 @@
+[23-Feb-2025 21:55:42 Asia/Jakarta] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'nama' in 'SELECT' in /home/airj1347/public_html/ADMIN/member/member.php:10
+Stack trace:
+#0 /home/airj1347/public_html/ADMIN/member/member.php(10): PDO->query('SELECT nama, em...')
+#1 {main}
+  thrown in /home/airj1347/public_html/ADMIN/member/member.php on line 10
+[21-Mar-2025 23:28:23 Asia/Jakarta] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'app_access' in 'SELECT' in /home/airj1347/public_html/ADMIN/member/member.php:10
+Stack trace:
+#0 /home/airj1347/public_html/ADMIN/member/member.php(10): PDO->query('SELECT username...')
+#1 {main}
+  thrown in /home/airj1347/public_html/ADMIN/member/member.php on line 10
+[21-Mar-2025 23:28:32 Asia/Jakarta] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'app_access' in 'SELECT' in /home/airj1347/public_html/ADMIN/member/member.php:10
+Stack trace:
+#0 /home/airj1347/public_html/ADMIN/member/member.php(10): PDO->query('SELECT username...')
+#1 {main}
+  thrown in /home/airj1347/public_html/ADMIN/member/member.php on line 10
+[21-Mar-2025 23:28:35 Asia/Jakarta] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'app_access' in 'SELECT' in /home/airj1347/public_html/ADMIN/member/member.php:10
+Stack trace:
+#0 /home/airj1347/public_html/ADMIN/member/member.php(10): PDO->query('SELECT username...')
+#1 {main}
+  thrown in /home/airj1347/public_html/ADMIN/member/member.php on line 10
+[21-Mar-2025 23:34:13 Asia/Jakarta] PHP Fatal error:  Cannot redeclare requireLogin() (previously declared in /home/airj1347/public_html/ADMIN/includes/auth.php:5) in /home/airj1347/public_html/ADMIN/includes/auth.php on line 5
+[21-Mar-2025 23:35:20 Asia/Jakarta] PHP Fatal error:  Cannot redeclare requireLogin() (previously declared in /home/airj1347/public_html/ADMIN/includes/auth.php:5) in /home/airj1347/public_html/ADMIN/includes/auth.php on line 5
+[21-Mar-2025 23:35:23 Asia/Jakarta] PHP Fatal error:  Cannot redeclare requireLogin() (previously declared in /home/airj1347/public_html/ADMIN/includes/auth.php:5) in /home/airj1347/public_html/ADMIN/includes/auth.php on line 5
+[21-Mar-2025 23:35:24 Asia/Jakarta] PHP Fatal error:  Cannot redeclare requireLogin() (previously declared in /home/airj1347/public_html/ADMIN/includes/auth.php:5) in /home/airj1347/public_html/ADMIN/includes/auth.php on line 5
+[21-Mar-2025 23:35:24 Asia/Jakarta] PHP Fatal error:  Cannot redeclare requireLogin() (previously declared in /home/airj1347/public_html/ADMIN/includes/auth.php:5) in /home/airj1347/public_html/ADMIN/includes/auth.php on line 5
+[21-Mar-2025 23:35:27 Asia/Jakarta] PHP Fatal error:  Cannot redeclare requireLogin() (previously declared in /home/airj1347/public_html/ADMIN/includes/auth.php:5) in /home/airj1347/public_html/ADMIN/includes/auth.php on line 5
+[21-Mar-2025 23:36:49 Asia/Jakarta] PHP Fatal error:  Cannot redeclare requireLogin() (previously declared in /home/airj1347/public_html/ADMIN/includes/auth.php:5) in /home/airj1347/public_html/ADMIN/includes/auth.php on line 5
+[21-Mar-2025 23:36:55 Asia/Jakarta] PHP Fatal error:  Cannot redeclare requireLogin() (previously declared in /home/airj1347/public_html/ADMIN/includes/auth.php:5) in /home/airj1347/public_html/ADMIN/includes/auth.php on line 5
+[22-Mar-2025 00:09:01 Asia/Jakarta] Data yang diterima: {"user_id":"43","app_access":1}
+[22-Mar-2025 00:09:35 Asia/Jakarta] Data yang diterima: {"user_id":"32","app_access":1}
+[22-Mar-2025 00:09:37 Asia/Jakarta] Data yang diterima: {"user_id":"13","app_access":0}
+[22-Mar-2025 00:09:42 Asia/Jakarta] Data yang diterima: {"user_id":"43","app_access":1}
+[22-Mar-2025 00:11:59 Asia/Jakarta] Data yang diterima: {"user_id":"14","app_access":1}
+[22-Mar-2025 00:11:59 Asia/Jakarta] Data JSON: Array
+(
+    [user_id] => 14
+    [app_access] => 1
+)
+
+[22-Mar-2025 00:12:15 Asia/Jakarta] Data yang diterima: {"user_id":"14","app_access":0}
+[22-Mar-2025 00:12:15 Asia/Jakarta] Data JSON: Array
+(
+    [user_id] => 14
+    [app_access] => 0
+)
+
+[22-Mar-2025 00:12:17 Asia/Jakarta] Data yang diterima: {"user_id":"13","app_access":0}
+[22-Mar-2025 00:12:17 Asia/Jakarta] Data JSON: Array
+(
+    [user_id] => 13
+    [app_access] => 0
+)
+
+[22-Mar-2025 00:12:17 Asia/Jakarta] Data yang diterima: {"user_id":"44","app_access":0}
+[22-Mar-2025 00:12:17 Asia/Jakarta] Data JSON: Array
+(
+    [user_id] => 44
+    [app_access] => 0
+)
+
+[22-Mar-2025 00:12:18 Asia/Jakarta] Data yang diterima: {"user_id":"45","app_access":0}
+[22-Mar-2025 00:12:18 Asia/Jakarta] Data JSON: Array
+(
+    [user_id] => 45
+    [app_access] => 0
+)
+
+[22-Mar-2025 00:12:25 Asia/Jakarta] Data yang diterima: {"user_id":"45","app_access":1}
+[22-Mar-2025 00:12:25 Asia/Jakarta] Data JSON: Array
+(
+    [user_id] => 45
+    [app_access] => 1
+)
+
+[22-Mar-2025 00:12:26 Asia/Jakarta] Data yang diterima: {"user_id":"44","app_access":1}
+[22-Mar-2025 00:12:26 Asia/Jakarta] Data JSON: Array
+(
+    [user_id] => 44
+    [app_access] => 1
+)
+
+[22-Mar-2025 00:12:28 Asia/Jakarta] Data yang diterima: {"user_id":"13","app_access":1}
+[22-Mar-2025 00:12:28 Asia/Jakarta] Data JSON: Array
+(
+    [user_id] => 13
+    [app_access] => 1
+)
+
+[22-Mar-2025 00:12:31 Asia/Jakarta] Data yang diterima: {"user_id":"32","app_access":1}
+[22-Mar-2025 00:12:31 Asia/Jakarta] Data JSON: Array
+(
+    [user_id] => 32
+    [app_access] => 1
+)
+
+[22-Mar-2025 00:17:53 Asia/Jakarta] Data yang diterima: {"user_id":"43","app_access":1}
+[22-Mar-2025 00:17:53 Asia/Jakarta] Data JSON: Array
+(
+    [user_id] => 43
+    [app_access] => 1
+)
+
+[22-Mar-2025 00:17:55 Asia/Jakarta] Data yang diterima: {"user_id":"14","app_access":1}
+[22-Mar-2025 00:17:55 Asia/Jakarta] Data JSON: Array
+(
+    [user_id] => 14
+    [app_access] => 1
+)
+
+[22-Mar-2025 00:18:03 Asia/Jakarta] Data yang diterima: {"user_id":"43","app_access":0}
+[22-Mar-2025 00:18:03 Asia/Jakarta] Data JSON: Array
+(
+    [user_id] => 43
+    [app_access] => 0
+)
+
+[22-Mar-2025 00:18:04 Asia/Jakarta] Data yang diterima: {"user_id":"14","app_access":0}
+[22-Mar-2025 00:18:04 Asia/Jakarta] Data JSON: Array
+(
+    [user_id] => 14
+    [app_access] => 0
+)
+
+[22-Mar-2025 00:19:19 Asia/Jakarta] Data yang diterima: {"user_id":"14","app_access":1}
+[22-Mar-2025 00:19:19 Asia/Jakarta] Data JSON: Array
+(
+    [user_id] => 14
+    [app_access] => 1
+)
+
+[22-Mar-2025 00:19:25 Asia/Jakarta] Data yang diterima: {"user_id":"14","app_access":0}
+[22-Mar-2025 00:19:25 Asia/Jakarta] Data JSON: Array
+(
+    [user_id] => 14
+    [app_access] => 0
+)
+
+[22-Mar-2025 00:21:51 Asia/Jakarta] Data yang diterima: {"user_id":"14","app_access":1}
+[22-Mar-2025 00:21:51 Asia/Jakarta] Data JSON: Array
+(
+    [user_id] => 14
+    [app_access] => 1
+)
+
+[22-Mar-2025 00:21:56 Asia/Jakarta] Data yang diterima: {"user_id":"14","app_access":0}
+[22-Mar-2025 00:21:56 Asia/Jakarta] Data JSON: Array
+(
+    [user_id] => 14
+    [app_access] => 0
+)
+
+[22-Mar-2025 00:22:57 Asia/Jakarta] Data yang diterima: {"user_id":"14","app_access":1}
+[22-Mar-2025 00:22:57 Asia/Jakarta] Data JSON: Array
+(
+    [user_id] => 14
+    [app_access] => 1
+)
+
+[22-Mar-2025 00:22:59 Asia/Jakarta] Data yang diterima: {"user_id":"14","app_access":0}
+[22-Mar-2025 00:22:59 Asia/Jakarta] Data JSON: Array
+(
+    [user_id] => 14
+    [app_access] => 0
+)
+
+[22-Mar-2025 00:23:22 Asia/Jakarta] Data yang diterima: {"user_id":"14","app_access":1}
+[22-Mar-2025 00:23:22 Asia/Jakarta] Data JSON: Array
+(
+    [user_id] => 14
+    [app_access] => 1
+)
+
+[22-Mar-2025 00:23:30 Asia/Jakarta] Data yang diterima: {"user_id":"14","app_access":0}
+[22-Mar-2025 00:23:30 Asia/Jakarta] Data JSON: Array
+(
+    [user_id] => 14
+    [app_access] => 0
+)
+
+[22-Mar-2025 00:23:41 Asia/Jakarta] Data yang diterima: {"user_id":"14","app_access":1}
+[22-Mar-2025 00:23:41 Asia/Jakarta] Data JSON: Array
+(
+    [user_id] => 14
+    [app_access] => 1
+)
+
+[22-Mar-2025 09:52:47 Asia/Jakarta] Data yang diterima: {"user_id":"13","app_access":0}
+[22-Mar-2025 09:52:47 Asia/Jakarta] Data JSON: Array
+(
+    [user_id] => 13
+    [app_access] => 0
+)
+
+[22-Mar-2025 09:52:48 Asia/Jakarta] Data yang diterima: {"user_id":"14","app_access":0}
+[22-Mar-2025 09:52:48 Asia/Jakarta] Data JSON: Array
+(
+    [user_id] => 14
+    [app_access] => 0
+)
+
+[22-Mar-2025 10:02:21 Asia/Jakarta] Data yang diterima: {"user_id":"13","app_access":1}
+[22-Mar-2025 10:02:21 Asia/Jakarta] Data JSON: Array
+(
+    [user_id] => 13
+    [app_access] => 1
+)
+
+[22-Mar-2025 10:02:22 Asia/Jakarta] Data yang diterima: {"user_id":"14","app_access":1}
+[22-Mar-2025 10:02:22 Asia/Jakarta] Data JSON: Array
+(
+    [user_id] => 14
+    [app_access] => 1
+)
+
+[22-Mar-2025 10:16:02 Asia/Jakarta] Data yang diterima: {"user_id":"13","app_access":0}
+[22-Mar-2025 10:16:02 Asia/Jakarta] Data JSON: Array
+(
+    [user_id] => 13
+    [app_access] => 0
+)
+
+[22-Mar-2025 10:16:03 Asia/Jakarta] Data yang diterima: {"user_id":"14","app_access":0}
+[22-Mar-2025 10:16:03 Asia/Jakarta] Data JSON: Array
+(
+    [user_id] => 14
+    [app_access] => 0
+)
+
+[22-Mar-2025 10:16:15 Asia/Jakarta] Data yang diterima: {"user_id":"14","app_access":1}
+[22-Mar-2025 10:16:15 Asia/Jakarta] Data JSON: Array
+(
+    [user_id] => 14
+    [app_access] => 1
+)
+
+[22-Mar-2025 10:16:15 Asia/Jakarta] Data yang diterima: {"user_id":"13","app_access":1}
+[22-Mar-2025 10:16:15 Asia/Jakarta] Data JSON: Array
+(
+    [user_id] => 13
+    [app_access] => 1
+)
+
+[22-Mar-2025 10:16:28 Asia/Jakarta] Data yang diterima: {"user_id":"14","app_access":0}
+[22-Mar-2025 10:16:28 Asia/Jakarta] Data JSON: Array
+(
+    [user_id] => 14
+    [app_access] => 0
+)
+
+[22-Mar-2025 10:16:28 Asia/Jakarta] Data yang diterima: {"user_id":"13","app_access":0}
+[22-Mar-2025 10:16:28 Asia/Jakarta] Data JSON: Array
+(
+    [user_id] => 13
+    [app_access] => 0
+)
+
+[22-Mar-2025 10:21:01 Asia/Jakarta] Data yang diterima: {"user_id":"13","app_access":1}
+[22-Mar-2025 10:21:01 Asia/Jakarta] Data JSON: Array
+(
+    [user_id] => 13
+    [app_access] => 1
+)
+
+[22-Mar-2025 10:21:01 Asia/Jakarta] Data yang diterima: {"user_id":"14","app_access":1}
+[22-Mar-2025 10:21:01 Asia/Jakarta] Data JSON: Array
+(
+    [user_id] => 14
+    [app_access] => 1
+)
+
+[22-Mar-2025 20:52:24 Asia/Jakarta] Data yang diterima: {"user_id":"43","app_access":1}
+[22-Mar-2025 20:52:24 Asia/Jakarta] Data JSON: Array
+(
+    [user_id] => 43
+    [app_access] => 1
+)
+
+[22-Mar-2025 20:52:25 Asia/Jakarta] Data yang diterima: {"user_id":"43","app_access":0}
+[22-Mar-2025 20:52:25 Asia/Jakarta] Data JSON: Array
+(
+    [user_id] => 43
+    [app_access] => 0
+)
+
+[23-Mar-2025 14:43:05 Asia/Jakarta] Data yang diterima: {"user_id":"14","app_access":0}
+[23-Mar-2025 14:43:05 Asia/Jakarta] Data JSON: Array
+(
+    [user_id] => 14
+    [app_access] => 0
+)
+
+[23-Mar-2025 14:43:05 Asia/Jakarta] Data yang diterima: {"user_id":"13","app_access":0}
+[23-Mar-2025 14:43:05 Asia/Jakarta] Data JSON: Array
+(
+    [user_id] => 13
+    [app_access] => 0
+)
+
+[23-Mar-2025 14:55:34 Asia/Jakarta] Data yang diterima: {"user_id":"13","app_access":0}
+[23-Mar-2025 14:55:34 Asia/Jakarta] Data JSON: Array
+(
+    [user_id] => 13
+    [app_access] => 0
+)
+
+[23-Mar-2025 15:05:41 Asia/Jakarta] Data yang diterima: {"user_id":"14","app_access":1}
+[23-Mar-2025 15:05:41 Asia/Jakarta] Data JSON: Array
+(
+    [user_id] => 14
+    [app_access] => 1
+)
+
+[23-Mar-2025 16:03:32 Asia/Jakarta] Data yang diterima: {"user_id":"13","app_access":0}
+[23-Mar-2025 16:03:32 Asia/Jakarta] Data JSON: Array
+(
+    [user_id] => 13
+    [app_access] => 0
+)
+
+[23-Mar-2025 16:05:58 Asia/Jakarta] Data yang diterima: {"user_id":"13","app_access":1}
+[23-Mar-2025 16:05:58 Asia/Jakarta] Data JSON: Array
+(
+    [user_id] => 13
+    [app_access] => 1
+)
+
+[04-May-2025 15:36:57 Asia/Jakarta] Data yang diterima: {"user_id":"47","app_access":1}
+[04-May-2025 15:36:57 Asia/Jakarta] Data JSON: Array
+(
+    [user_id] => 47
+    [app_access] => 1
+)
+
