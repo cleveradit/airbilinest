@@ -195,7 +195,6 @@ function url($path = '', $lang = null) {
     <!-- Header Section -->
 
     <header>
-        tes
 
         <div class="logo">
 
