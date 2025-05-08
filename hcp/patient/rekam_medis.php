@@ -1,5 +1,4 @@
 <?php
-
 session_start();
 
 // Set default language to English
@@ -51,17 +50,27 @@ $result = $conn->query($sql);
 
 $user = $result->fetch_assoc();
 
-$sql = "SELECT * FROM patients";
-$patient_result = $conn->query($sql);
-$patients = [];
+$patient_id = $_GET['id'];
 
-if ($patient_result->num_rows > 0) {
-    while ($row = $patient_result->fetch_assoc()) {
-        $patients[] = $row;
+$sql = "SELECT * FROM patients WHERE id='$patient_id'";
+
+$result_patient = $conn->query($sql);
+
+$patient = $result_patient->fetch_assoc();
+
+$sql = "SELECT m.*, p.nama_pasien, u.username as nama_dokter FROM medical_records AS m JOIN patients AS p ON p.id = m.patient_id JOIN users AS u ON u.id = m.user_id WHERE m.patient_id='$patient_id'";
+$result_medical_record = $conn->query($sql);
+$medical_records = [];
+
+if ($result_medical_record->num_rows > 0) {
+    while ($row = $result_medical_record->fetch_assoc()) {
+        $medical_records[] = $row;
     }
 }
 
 include '../includes/url.php';
+
+
 
 ?>
 
@@ -146,85 +155,79 @@ include '../includes/url.php';
 
     <div class="info">
 
-        <h1>List <?php echo $lang['patient']; ?></h1>
+        <h1><?php echo $lang['history_patient']; ?> : <?php echo $patient['nama_pasien'] ?></h1>
 
         <div class="card p-3 shadow bg-white rounded">
             <div class="d-flex justify-content-between align-items-center">
-                <h5 class="text-secondary mb-0">Data</h5>
-                <button class="btn btn-sm btn-primary" onclick="window.location.href='add_patient.php'">
-                    + <?php echo $lang['add_patient'] ?>
+            <button class="btn btn-sm btn-outline btn-outline-secondary" onclick="window.location.href='patient.php'"><?php echo $lang['back'] ?></button>
+                <button class="btn btn-sm btn-primary" onclick="window.location.href='add_rekam_medis.php?id=<?php echo $patient['id'] ?>'">
+                    + <?php echo $lang['add_medical_record'] ?>
                 </button>
             </div>
             <hr>
 
-            <table id="example" class="table table-striped table-bordered display responsive nowrap" style="font-size:small">
+            <table id="example_medical_records" class="table table-striped table-bordered display responsive nowrap" style="font-size:small">
                 <thead>
                     <tr>
                         <th>No</th>
                         <th>Aksi</th>
-                        <th>Nama</th>
-                        <th>Jenis Kelamin</th>
-                        <th>Berat</th>
-                        <th>Tgl Lahir</th>
-                        <th>Umur Hamil</th>
-                        <th>Apgar</th>
-                        <th>Lahir</th>
-                        <th>Gol Darah</th>
-                        <th>Rhesus</th>
-                        <th>Etnis Ayah</th>
-                        <th>Etnis Ibu</th>
-                        <th>Rhesus Ibu</th>
-                        <th>Gol Darah Ibu</th>
+                        <th>Tanggal</th>
+                        <th>Pasien</th>
+                        <th>Dokter</th>
+                        <th>Bilinorm</th>
+                        <th>Lama Fototerapi</th>
+                        <th>Intensitas</th>
+                        <th>Sebelum Fototerapi</th>
+                        <th>Sesudah Fototerapi</th>
+                        <th>Observasi</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <?php foreach ($patients as $index => $patient) { ?>
+                    <?php foreach ($medical_records as $index => $medical_record) { ?>
                         <tr>
                             <td><?php echo $index + 1 ?></td>
                             <td>
-                                <a href="rekam_medis.php?id=<?php echo $patient['id'] ?>" class="text-success" title="View History Rekam Medis">
-                                    <i class="fas fa-book"></i>
+                                <a href="detail_rekam_medis.php?id=<?php echo $medical_record['id'] ?>" class="text-success" title="View Rekam Medis">
+                                    <i class="fas fa-eye"></i>
                                 </a>
-                                <a href="edit_patient.php?id=<?php echo $patient['id'] ?>" class="text-info" title="Edit">
-                                    <i class="fas fa-edit"></i>
-                                </a>
-                                <a href="#" class="text-danger" title="Delete" data-toggle="modal" data-target="#deleteModal" data-id="<?= $patient['id'] ?>">
+                                <a href="#" class="text-danger" title="Delete" data-toggle="modal" data-target="#deleteMedicalRecordModal" data-id="<?= $medical_record['id'] ?>">
                                     <i class="fas fa-trash-alt"></i>
                                 </a>
                             </td>
-                            <td><?php echo $patient['nama_pasien'] ?></td>
-                            <td><?php echo $patient['jenis_kelamin'] ?></td>
-                            <td><?php echo $patient['berat_lahir'] ?></td>
-                            <td><?php echo $patient['tanggal_lahir'] ?></td>
-                            <td><?php echo $patient['umur_kehamilan'] ?></td>
-                            <td><?php echo $patient['skor_apgar'] ?></td>
-                            <td><?php echo $patient['cara_lahir'] ?></td>
-                            <td><?php echo $patient['golongan_darah'] ?></td>
-                            <td><?php echo $patient['rhesus'] ?></td>
-                            <td><?php echo $patient['etnis_ayah'] ?></td>
-                            <td><?php echo $patient['etnis_ibu'] ?></td>
-                            <td><?php echo $patient['rhesus_ibu'] ?></td>
-                            <td><?php echo $patient['golongan_darah_ibu'] ?></td>
+                            <td><?php echo $medical_record['tanggal_ambil_data'] ?></td>
+                            <td><?php echo $medical_record['nama_pasien'] ?></td>
+                            <td><?php echo $medical_record['nama_dokter'] ?></td>
+                            <td><?php echo $medical_record['hasil_bilinorm'] ?></td>
+                            <td><?php echo $medical_record['lama_fototerapi'] ?></td>
+                            <td><?php echo $medical_record['intensitas_fototerapi'] ?></td>
+                            <td>
+                                TCB <?php echo $medical_record['tcb_sebelum_fototerapi'] ?>;
+                                TSB<?php echo $medical_record['tsb_sebelum_fototerapi'] ?>
+                            </td>
+                            <td>
+                                TCB<?php echo $medical_record['tcb_sesudah_fototerapi'] ?>;
+                                TSB<?php echo $medical_record['tsb_sesudah_fototerapi'] ?>
+                            </td>
+                            <td><?php echo $medical_record['observasi'] ?></td>
                         </tr>
                     <?php } ?>
                 </tbody>
             </table>
         </div>
 
-
     </div>
 
-    <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog">
+    <div class="modal fade" id="deleteMedicalRecordModal" tabindex="-1" role="dialog">
         <div class="modal-dialog" role="document">
-            <form action="delete_patient.php" method="POST">
+            <form action="delete_rekam_medis.php" method="POST">
                 <div class="modal-content">
                     <div class="modal-header">
                         <h5 class="modal-title">Confirm Delete</h5>
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
                     </div>
                     <div class="modal-body">
-                        Are you sure you want to delete this patient?
-                        <input type="hidden" name="patient_id" id="modal_patient_id">
+                        Are you sure you want to delete this medical record?
+                        <input type="hidden" name="medical_record_id" id="modal_medical_record_id">
                     </div>
                     <div class="modal-footer">
                         <button type="submit" class="btn btn-danger">Delete</button>
@@ -308,9 +311,7 @@ include '../includes/url.php';
     <script src="https://cdn.datatables.net/responsive/3.0.4/js/dataTables.responsive.js"></script>
     <script src="https://cdn.datatables.net/responsive/3.0.4/js/responsive.dataTables.js"></script>
 
-
     <script src="script.js"></script>
-
 
 </body>
 

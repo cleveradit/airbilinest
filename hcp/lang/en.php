@@ -777,6 +777,10 @@ $lang = [
     //PATIENT
     'add_patient' => 'Add Pasien',
     'back' => 'Back',
+    'edit_patient' => 'Edit Pasien',
+    'history_patient' => 'History Medical Record',
+    'medical_record' => 'Medical Record',
+    'add_medical_record' => 'Add Medical Record',
 
 
 ];

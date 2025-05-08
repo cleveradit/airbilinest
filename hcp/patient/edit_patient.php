@@ -1,5 +1,4 @@
 <?php
-
 session_start();
 
 // Set default language to English
@@ -50,6 +49,14 @@ $sql = "SELECT * FROM users WHERE id='$user_id'";
 $result = $conn->query($sql);
 
 $user = $result->fetch_assoc();
+
+$patient_id = $_GET['id'];
+
+$sql = "SELECT * FROM patients WHERE id='$patient_id'";
+
+$result_patient = $conn->query($sql);
+
+$patient = $result_patient->fetch_assoc();
 
 include '../includes/url.php';
 
@@ -137,68 +144,69 @@ include '../includes/url.php';
 
     <div class="info">
 
-        <h1><?php echo $lang['add_patient']; ?></h1>
+        <h1><?php echo $lang['edit_patient']; ?></h1>
 
         <div class="card p-3 shadow bg-white rounded">
             <div class="d-flex justify-content-between align-items-center">
                 <button class="btn btn-sm btn-outline btn-outline-secondary" onclick="window.location.href='patient.php'"><?php echo $lang['back'] ?></button>
             </div>
             <hr>
-            <form method="POST" action="save_patient.php">
+            <form method="POST" action="patch_patient.php">
                 <div class="row">
+                    <input value="<?php echo $patient['id'] ?>" type="hidden" name="id" class="form-control" id="id">
                     <!-- Nama Pasien -->
                     <div class="form-group col-lg-3 col-md-4 col-sm-6 col-12">
                         <label for="nama_pasien">Nama Pasien</label>
-                        <input type="text" name="nama_pasien" class="form-control" id="nama_pasien" required>
+                        <input value="<?php echo $patient['nama_pasien'] ?>" type="text" name="nama_pasien" class="form-control" id="nama_pasien" required>
                     </div>
 
                     <!-- Jenis Kelamin -->
                     <div class="form-group col-lg-3 col-md-4 col-sm-6 col-12">
                         <label for="jenis_kelamin">Jenis Kelamin</label>
                         <select class="form-control" name="jenis_kelamin" id="jenis_kelamin">
-                            <option value="Perempuan">Perempuan</option>
-                            <option value="Laki-laki">Laki-laki</option>
+                            <option <?php echo $patient['jenis_kelamin'] == 'Perempuan' ? 'selected' : '' ?> value="Perempuan">Perempuan</option>
+                            <option <?php echo $patient['jenis_kelamin'] == 'Laki-laki' ? 'selected' : '' ?> value="Laki-laki">Laki-laki</option>
                         </select>
                     </div>
 
                     <!-- Berat Lahir -->
                     <div class="form-group col-lg-3 col-md-4 col-sm-6 col-12">
                         <label for="berat_lahir">Berat Lahir</label>
-                        <input type="text" name="berat_lahir" class="form-control" id="berat_lahir" required>
+                        <input value="<?php echo $patient['berat_lahir'] ?>" type="text" name="berat_lahir" class="form-control" id="berat_lahir" required>
                     </div>
 
                     <!-- Tanggal Lahir -->
                     <div class="form-group col-lg-3 col-md-4 col-sm-6 col-12">
                         <label for="tanggal_lahir">Tanggal Lahir</label>
-                        <input type="date" name="tanggal_lahir" class="form-control" id="tanggal_lahir" required>
+                        <input value="<?php echo $patient['tanggal_lahir'] ?>" type="date" name="tanggal_lahir" class="form-control" id="tanggal_lahir" required>
                     </div>
 
                     <!-- Umur Kehamilan -->
                     <div class="form-group col-lg-3 col-md-4 col-sm-6 col-12">
                         <label for="umur_kehamilan">Umur Kehamilan</label>
-                        <input type="number" name="umur_kehamilan" class="form-control" id="umur_kehamilan" required>
+                        <input value="<?php echo $patient['umur_kehamilan'] ?>" type="number" name="umur_kehamilan" class="form-control" id="umur_kehamilan" required>
                     </div>
 
                     <!-- Skor Apgar -->
                     <div class="form-group col-lg-3 col-md-4 col-sm-6 col-12">
                         <label for="skor_apgar">Skor Apgar</label>
-                        <input type="text" name="skor_apgar" class="form-control" id="skor_apgar" required>
+                        <input value="<?php echo $patient['skor_apgar'] ?>" type="text" name="skor_apgar" class="form-control" id="skor_apgar" required>
                     </div>
 
                     <!-- Cara Lahir -->
                     <div class="form-group col-lg-3 col-md-4 col-sm-6 col-12">
                         <label for="cara_lahir">Cara Lahir</label>
-                        <input type="text" name="cara_lahir" class="form-control" id="cara_lahir" required>
+                        <input value="<?php echo $patient['cara_lahir'] ?>" type="text" name="cara_lahir" class="form-control" id="cara_lahir" required>
                     </div>
 
                     <!-- Golongan Darah -->
                     <div class="form-group col-lg-3 col-md-4 col-sm-6 col-12">
                         <label for="golongan_darah">Golongan Darah</label>
                         <select class="form-control" name="golongan_darah" id="golongan_darah">
-                            <option value="A">A</option>
-                            <option value="B">B</option>
-                            <option value="AB">AB</option>
-                            <option value="O">O</option>
+                            <option <?php echo $patient['golongan_darah'] == 'A' ? 'selected' : '' ?> value="A">A</option>
+                            <option <?php echo $patient['golongan_darah'] == 'B' ? 'selected' : '' ?> value="B">B</option>
+                            <option <?php echo $patient['golongan_darah'] == 'AB' ? 'selected' : '' ?> value="AB">AB</option>
+                            <option <?php echo $patient['golongan_darah'] == 'O' ? 'selected' : '' ?> value="O">O</option>
                         </select>
                     </div>
 
@@ -206,29 +214,29 @@ include '../includes/url.php';
                     <div class="form-group col-lg-3 col-md-4 col-sm-6 col-12">
                         <label for="rhesus">Rhesus</label>
                         <select class="form-control" name="rhesus" id="rhesus">
-                            <option value="+">+</option>
-                            <option value="-">-</option>
+                            <option <?php echo $patient['rhesus'] == '+' ? 'selected' : '' ?> value="+">+</option>
+                            <option <?php echo $patient['rhesus'] == '-' ? 'selected' : '' ?> value="-">-</option>
                         </select>
                     </div>
 
                     <!-- Etnis Ayah -->
                     <div class="form-group col-lg-3 col-md-4 col-sm-6 col-12">
                         <label for="etnis_ayah">Etnis Ayah</label>
-                        <input type="text" name="etnis_ayah" class="form-control" id="etnis_ayah" required>
+                        <input value="<?php echo $patient['etnis_ayah'] ?>" type="text" name="etnis_ayah" class="form-control" id="etnis_ayah" required>
                     </div>
 
                     <!-- Etnis Ibu -->
                     <div class="form-group col-lg-3 col-md-4 col-sm-6 col-12">
                         <label for="etnis_ibu">Etnis Ibu</label>
-                        <input type="text" name="etnis_ibu" class="form-control" id="etnis_ibu" required>
+                        <input value="<?php echo $patient['etnis_ibu'] ?>" type="text" name="etnis_ibu" class="form-control" id="etnis_ibu" required>
                     </div>
 
                     <!-- Rhesus Ibu -->
                     <div class="form-group col-lg-3 col-md-4 col-sm-6 col-12">
                         <label for="rhesus_ibu">Rhesus Ibu</label>
                         <select class="form-control" name="rhesus_ibu" id="rhesus_ibu">
-                            <option value="+">+</option>
-                            <option value="-">-</option>
+                            <option <?php echo $patient['rhesus_ibu'] == '+' ? 'selected' : '' ?> value="+">+</option>
+                            <option <?php echo $patient['rhesus_ibu'] == '-' ? 'selected' : '' ?> value="-">-</option>
                         </select>
                     </div>
 
@@ -236,10 +244,10 @@ include '../includes/url.php';
                     <div class="form-group col-lg-3 col-md-4 col-sm-6 col-12">
                         <label for="golongan_darah_ibu">Golongan Darah Ibu</label>
                         <select class="form-control" name="golongan_darah_ibu" id="golongan_darah_ibu">
-                            <option value="A">A</option>
-                            <option value="B">B</option>
-                            <option value="AB">AB</option>
-                            <option value="O">O</option>
+                            <option <?php echo $patient['golongan_darah_ibu'] == 'A' ? 'selected' : '' ?> value="A">A</option>
+                            <option <?php echo $patient['golongan_darah_ibu'] == 'B' ? 'selected' : '' ?> value="B">B</option>
+                            <option <?php echo $patient['golongan_darah_ibu'] == 'AB' ? 'selected' : '' ?> value="AB">AB</option>
+                            <option <?php echo $patient['golongan_darah_ibu'] == 'O' ? 'selected' : '' ?> value="O">O</option>
                         </select>
                     </div>
                 </div>

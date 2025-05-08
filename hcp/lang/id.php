@@ -781,6 +781,9 @@ $lang = [
     //PATIENT
     'add_patient' => 'Tambah Pasien',
     'back' => 'Kembali',
+    'history_patient' => 'Riwayat Rekam Medis',
+    'medical_record' => 'Rekam Medis',
+    'add_medical_record' => 'Tambah Rekam Medis',
 
 
 
