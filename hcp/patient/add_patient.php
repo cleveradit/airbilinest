@@ -199,6 +199,7 @@ include '../includes/url.php';
                             <option value="B">B</option>
                             <option value="AB">AB</option>
                             <option value="O">O</option>
+                            <option value="tidak terisi">tidak terisi</option>
                         </select>
                     </div>
 
@@ -208,6 +209,7 @@ include '../includes/url.php';
                         <select class="form-control" name="rhesus" id="rhesus">
                             <option value="+">+</option>
                             <option value="-">-</option>
+                            <option value="tidak terisi">tidak terisi</option>
                         </select>
                     </div>
 
@@ -229,6 +231,7 @@ include '../includes/url.php';
                         <select class="form-control" name="rhesus_ibu" id="rhesus_ibu">
                             <option value="+">+</option>
                             <option value="-">-</option>
+                            <option value="tidak terisi">tidak terisi</option>
                         </select>
                     </div>
 
@@ -240,6 +243,7 @@ include '../includes/url.php';
                             <option value="B">B</option>
                             <option value="AB">AB</option>
                             <option value="O">O</option>
+                            <option value="tidak terisi">tidak terisi</option>
                         </select>
                     </div>
                 </div>

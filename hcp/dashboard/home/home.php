@@ -1,4 +1,53 @@
 <?php include include $_SERVER['DOCUMENT_ROOT'] . '/hcp/template/header.php'; ?>
+
+<?php
+// Koneksi ke database
+include '../../includes/db.php';
+
+// Ambil data jumlah pasien berdasarkan jenis kelamin
+$query = "SELECT jenis_kelamin, COUNT(*) as total FROM patients GROUP BY jenis_kelamin";
+$result = $conn->query($query);
+
+$labels = [];
+$values = [];
+
+while ($row = $result->fetch_assoc()) {
+    $labels[] = $row['jenis_kelamin'];
+    $values[] = $row['total'];
+}
+// echo "<pre>";
+// print_r($values);
+// echo "</pre>";
+// die();
+
+// Ambil data kunjungan 14 hari terakhir
+$query2 = "
+  SELECT DATE(tanggal_ambil_data) as tanggal, COUNT(*) as jumlah 
+  FROM medical_records 
+  WHERE tanggal_ambil_data >= DATE_SUB(CURDATE(), INTERVAL 14 DAY)
+  GROUP BY DATE(tanggal_ambil_data)
+  ORDER BY tanggal ASC
+";
+
+$result2 = mysqli_query($conn, $query2);
+
+$tanggal = [];
+$jumlah = [];
+
+while ($row = mysqli_fetch_assoc($result2)) {
+    $tanggal[] = $row['tanggal'];
+    $jumlah[] = $row['jumlah'];
+}
+
+// echo "<pre>";
+// print_r($tanggal);
+// echo "</pre>";
+// die();
+
+
+?>
+
+
 <div class="container-scroller">
     <!-- Sidebar -->
     <?php include include $_SERVER['DOCUMENT_ROOT'] . '/hcp/template/navbar.php'; ?>
@@ -12,11 +61,11 @@
          <div class="main-panel">
           <div class="content-wrapper">
             <div class="page-header">
-              <h3 class="page-title"> Chart-js </h3>
+              <h3 class="page-title"> Dashboard </h3>
               <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
-                  <li class="breadcrumb-item"><a href="#">Charts</a></li>
-                  <li class="breadcrumb-item active" aria-current="page">Chart-js</li>
+                  <!--<li class="breadcrumb-item"><a href="#">Charts</a></li>-->
+                  <li class="breadcrumb-item active" aria-current="page">Dashboard</li>
                 </ol>
               </nav>
             </div>
@@ -24,7 +73,7 @@
               <div class="col-lg-6 grid-margin stretch-card">
                 <div class="card">
                   <div class="card-body">
-                    <h4 class="card-title">Line chart</h4>
+                    <h4 class="card-title">Jumlah Kunjungan</h4>
                     <canvas id="lineChart" style="height:250px"></canvas>
                   </div>
                 </div>
@@ -50,7 +99,7 @@
               <div class="col-lg-6 grid-margin stretch-card">
                 <div class="card">
                   <div class="card-body">
-                    <h4 class="card-title">Doughnut chart</h4>
+                    <h4 class="card-title">Jenis Kelamin</h4>
                     <div class="doughnutjs-wrapper d-flex justify-content-center">
                       <canvas id="doughnutChart"></canvas>
                     </div>
@@ -91,5 +140,25 @@
         </div>
         <!-- main-panel ends -->
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!--script doughnut chart-->
+    <script>
+  const chartData = {
+    labels: <?php echo json_encode($labels); ?>,
+    values: <?php echo json_encode($values); ?>
+  };
+</script>
+
+    <!--script line chart-->
+    <script>
+  const chartLineData = {
+    lineLabels: <?php echo json_encode($tanggal); ?>,
+    lineData: <?php echo json_encode($jumlah); ?>
+  };
+</script>
+
+    <script src="chart.js"></script>
 
     <?php include include $_SERVER['DOCUMENT_ROOT'] . '/hcp/template/footer.php'; ?>
