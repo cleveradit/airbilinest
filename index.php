@@ -246,7 +246,7 @@ function url($path = '', $lang = null) {
 
                 <button class="popup-button" id="notProfessional"><?php echo $lang['not_professional']; ?></button>
 
-                <button class="popup-button" id="professional"><?php echo $lang['professional']; ?></button>
+                <a href="hcp/dashboard/auth/login.php" class="popup-button" id="professional"><?php echo $lang['professional']; ?></a>
 
             </div>
 
