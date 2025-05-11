@@ -8,12 +8,12 @@ document.addEventListener('DOMContentLoaded', function () {
             label: 'Distribusi Pasien',
             data: chartData.values, // Ganti dengan data dari PHP jika perlu
             backgroundColor: [
-                'rgba(255, 99, 132, 0.7)',
-                'rgba(54, 162, 235, 0.7)'
+              'rgba(54, 162, 235, 1)',  
+              'rgba(255, 99, 132, 0.7)'                
             ],
             borderColor: [
-                'rgba(255, 99, 132, 1)',
-                'rgba(54, 162, 235, 1)'
+              'rgba(54, 162, 235, 1)',
+              'rgba(255, 99, 132, 1)'
             ],
             borderWidth: 1
         }]

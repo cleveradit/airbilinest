@@ -69,6 +69,12 @@
                                             <label for="skor_apgar">Skor Apgar</label>
                                             <input type="text" name="skor_apgar" class="form-control" id="skor_apgar" required>
                                         </div>
+                                        
+                                        <!-- Alamat -->
+                                        <div class="form-group col-lg-3 col-md-4 col-sm-6 col-12">
+                                            <label for="alamat">Alamat</label>
+                                            <input type="text" name="alamat" class="form-control" id="alamat" required>
+                                        </div>
 
                                         <!-- Tempat Rawat -->
                                         <div class="form-group col-lg-3 col-md-4 col-sm-6 col-12">
@@ -167,6 +173,7 @@
     $tanggal_lahir = $_POST['tanggal_lahir'];
     $umur_kehamilan = $_POST['umur_kehamilan'];
     $skor_apgar = $_POST['skor_apgar'];
+    $alamat = $_POST['alamat'];
     $cara_lahir = $_POST['cara_lahir'];
     $golongan_darah = $_POST['golongan_darah'];
     $rhesus = $_POST['rhesus'];
@@ -178,11 +185,11 @@
 
     $sql = "INSERT INTO patients (
         nama_pasien, jenis_kelamin, berat_lahir, tanggal_lahir, umur_kehamilan,
-        skor_apgar, cara_lahir, golongan_darah, rhesus,
+        skor_apgar, alamat, cara_lahir, golongan_darah, rhesus,
         etnis_ayah, etnis_ibu, rhesus_ibu, golongan_darah_ibu
     ) VALUES (
         '$nama_pasien', '$jenis_kelamin', '$berat_lahir', '$tanggal_lahir', '$umur_kehamilan',
-        '$skor_apgar', '$cara_lahir', '$golongan_darah', '$rhesus',
+        '$skor_apgar', '$alamat', '$cara_lahir', '$golongan_darah', '$rhesus',
         '$etnis_ayah', '$etnis_ibu', '$rhesus_ibu', '$golongan_darah_ibu')";
     
 if ($conn->query($sql) === TRUE) {

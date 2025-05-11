@@ -2,14 +2,21 @@
 <?php
 
 $sql = "SELECT 
-    p.*, 
+    p.*,
     (
         SELECT m.tempat_rawat
-        FROM medical_records m 
-        WHERE m.patient_id = p.id 
+        FROM medical_records m
+        WHERE m.patient_id = p.id
         LIMIT 1
-    ) AS tempat
+    ) AS tempat,
+    (
+        SELECT m.tanggal_ambil_data
+        FROM medical_records m
+        WHERE m.patient_id = p.id
+        LIMIT 1
+    ) AS tanggal_ambil_data
 FROM patients p;
+
 ";
 $patient_result = $conn->query($sql);
 $patients = [];
@@ -47,7 +54,7 @@ if ($patient_result->num_rows > 0) {
                     <div class="card-body">
                         <div class="d-flex align-items-center mb-2">
                             <div class="wrapper d-flex align-items-center">
-                                <h4 class="card-title">Data Pasien</h4>
+                                <h4 class="card-title">Worklist Pasien</h4>
                             </div>
                             <div class="wrapper ms-auto action-bar">
                                 <button class="btn btn-sm btn-gradient-primary" onclick="window.location.href='patient_add.php'"><i class="fa fa-user me-1"></i> Tambah Pasien</button>
@@ -70,17 +77,9 @@ if ($patient_result->num_rows > 0) {
                                                         <th>Tempat Rawat</th>
                                                         <th>Nama</th>
                                                         <th>Jenis Kelamin</th>
-                                                        <th>Berat</th>
-                                                        <th>Tgl Lahir</th>
-                                                        <th>Umur Hamil</th>
-                                                        <th>Apgar</th>
-                                                        <th>Lahir</th>
-                                                        <th>Gol Darah</th>
-                                                        <th>Rhesus</th>
-                                                        <th>Etnis Ayah</th>
-                                                        <th>Etnis Ibu</th>
-                                                        <th>Rhesus Ibu</th>
-                                                        <th>Gol Darah Ibu</th>
+                                                        <th>Alamat</th>
+                                                        <th>Tanggal Lahir</th>
+                                                        <th>Tanggal Fototerapi</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
@@ -103,17 +102,9 @@ if ($patient_result->num_rows > 0) {
                                                             <td><?php echo $patient['tempat'] ?></td>
                                                             <td><?php echo $patient['nama_pasien'] ?></td>
                                                             <td><?php echo $patient['jenis_kelamin'] ?></td>
-                                                            <td><?php echo $patient['berat_lahir'] ?></td>
+                                                            <td><?php echo $patient['alamat'] ?></td>
                                                             <td><?php echo $patient['tanggal_lahir'] ?></td>
-                                                            <td><?php echo $patient['umur_kehamilan'] ?></td>
-                                                            <td><?php echo $patient['skor_apgar'] ?></td>
-                                                            <td><?php echo $patient['cara_lahir'] ?></td>
-                                                            <td><?php echo $patient['golongan_darah'] ?></td>
-                                                            <td><?php echo $patient['rhesus'] ?></td>
-                                                            <td><?php echo $patient['etnis_ayah'] ?></td>
-                                                            <td><?php echo $patient['etnis_ibu'] ?></td>
-                                                            <td><?php echo $patient['rhesus_ibu'] ?></td>
-                                                            <td><?php echo $patient['golongan_darah_ibu'] ?></td>
+                                                            <td><?php echo $patient['tanggal_ambil_data'] ?></td>
                                                         </tr>
                                                     <?php } ?>
                                                 </tbody>
