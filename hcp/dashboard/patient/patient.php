@@ -1,7 +1,16 @@
 <?php include include $_SERVER['DOCUMENT_ROOT'] . '/hcp/template/header.php'; ?>
 <?php
 
-$sql = "SELECT * FROM patients";
+$sql = "SELECT 
+    p.*, 
+    (
+        SELECT m.tempat_rawat
+        FROM medical_records m 
+        WHERE m.patient_id = p.id 
+        LIMIT 1
+    ) AS tempat
+FROM patients p;
+";
 $patient_result = $conn->query($sql);
 $patients = [];
 
@@ -10,6 +19,8 @@ if ($patient_result->num_rows > 0) {
         $patients[] = $row;
     }
 }
+
+
 
 ?>
 <div class="container-scroller">
@@ -24,11 +35,11 @@ if ($patient_result->num_rows > 0) {
         <div class="main-panel">
             <div class="content-wrapper">
                 <div class="page-header">
-                    <h3 class="page-title"> Patient </h3>
+                    <h3 class="page-title"> Pasien </h3>
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="#">Patient</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">List Patient</li>
+                            <!-- <li class="breadcrumb-item"><a href="#">Patient</a></li> -->
+                            <li class="breadcrumb-item active" aria-current="page">Pasien</li>
                         </ol>
                     </nav>
                 </div>
@@ -36,10 +47,10 @@ if ($patient_result->num_rows > 0) {
                     <div class="card-body">
                         <div class="d-flex align-items-center mb-2">
                             <div class="wrapper d-flex align-items-center">
-                                <h4 class="card-title">List Patient</h4>
+                                <h4 class="card-title">Data Pasien</h4>
                             </div>
                             <div class="wrapper ms-auto action-bar">
-                                <button class="btn btn-sm btn-gradient-primary" onclick="window.location.href='patient_add.php'"><i class="fa fa-user me-1"></i> Add Patient</button>
+                                <button class="btn btn-sm btn-gradient-primary" onclick="window.location.href='patient_add.php'"><i class="fa fa-user me-1"></i> Tambah Pasien</button>
                             </div>
                         </div>
                         
@@ -55,6 +66,8 @@ if ($patient_result->num_rows > 0) {
                                                     <tr>
                                                         <th>No</th>
                                                         <th>Aksi</th>
+                                                        <th>ID Pasien</th>
+                                                        <th>Tempat Rawat</th>
                                                         <th>Nama</th>
                                                         <th>Jenis Kelamin</th>
                                                         <th>Berat</th>
@@ -86,6 +99,8 @@ if ($patient_result->num_rows > 0) {
                                                                     <i class="fa fa-trash-o"></i>
                                                                 </a>
                                                             </td>
+                                                            <td><?php echo $patient['id'] ?></td>
+                                                            <td><?php echo $patient['tempat'] ?></td>
                                                             <td><?php echo $patient['nama_pasien'] ?></td>
                                                             <td><?php echo $patient['jenis_kelamin'] ?></td>
                                                             <td><?php echo $patient['berat_lahir'] ?></td>

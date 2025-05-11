@@ -12,11 +12,11 @@
         <div class="main-panel">
             <div class="content-wrapper">
                 <div class="page-header">
-                    <h3 class="page-title"> Patient </h3>
+                    <h3 class="page-title"> Pasien </h3>
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="#">Patient</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">Add Patient</li>
+                            <li class="breadcrumb-item"><a href="patient.php">Pasien</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Tambah Pasien</li>
                         </ol>
                     </nav>
                 </div>
@@ -24,7 +24,7 @@
                     <div class="card-body">
                         <div class="d-flex align-items-center mb-2">
                             <div class="wrapper d-flex align-items-center">
-                                <h4 class="card-title">Add Patient</h4>
+                                <h4 class="card-title">Tambah Pasien</h4>
                             </div>
                         </div>
                         <div class="row">
@@ -68,6 +68,12 @@
                                         <div class="form-group col-lg-3 col-md-4 col-sm-6 col-12">
                                             <label for="skor_apgar">Skor Apgar</label>
                                             <input type="text" name="skor_apgar" class="form-control" id="skor_apgar" required>
+                                        </div>
+
+                                        <!-- Tempat Rawat -->
+                                        <div class="form-group col-lg-3 col-md-4 col-sm-6 col-12">
+                                            <label for="tempat_rawat">Tempat Rawat</label>
+                                            <input type="text" name="tempat_rawat" class="form-control" id="tempat_rawat" required>
                                         </div>
 
                                         <!-- Cara Lahir -->
@@ -168,6 +174,7 @@
     $etnis_ibu = $_POST['etnis_ibu'];
     $rhesus_ibu = $_POST['rhesus_ibu'];
     $golongan_darah_ibu = $_POST['golongan_darah_ibu'];
+    $tempat_rawat = $_POST['tempat_rawat'];
 
     $sql = "INSERT INTO patients (
         nama_pasien, jenis_kelamin, berat_lahir, tanggal_lahir, umur_kehamilan,
@@ -177,7 +184,7 @@
         '$nama_pasien', '$jenis_kelamin', '$berat_lahir', '$tanggal_lahir', '$umur_kehamilan',
         '$skor_apgar', '$cara_lahir', '$golongan_darah', '$rhesus',
         '$etnis_ayah', '$etnis_ibu', '$rhesus_ibu', '$golongan_darah_ibu')";
-
+    
 if ($conn->query($sql) === TRUE) {
     echo "<script>
                         showSuccessToast('Add success!');

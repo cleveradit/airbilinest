@@ -41,10 +41,10 @@ const ctxLine = document.getElementById("lineChart").getContext("2d");
 new Chart(ctxLine, {
   type: "line",
   data: {
-    labels: ['senin', 'selasa'],
+    labels: ['senin', 'selasa', 'rabu', 'kamis'],
     datasets: [{
       label: "Jumlah Kunjungan",
-      data: [2, 3],
+      data: [2, 3, 1, 5],
       borderColor: "rgba(75, 192, 192, 1)",
       backgroundColor: "rgba(75, 192, 192, 0.2)",
       fill: true,

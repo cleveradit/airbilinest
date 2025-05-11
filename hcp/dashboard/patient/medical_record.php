@@ -34,11 +34,11 @@ if ($result_medical_record->num_rows > 0) {
         <div class="main-panel">
             <div class="content-wrapper">
                 <div class="page-header">
-                    <h3 class="page-title"> Patient : <?php echo $patient['nama_pasien'] ?> </h3>
+                    <h3 class="page-title"> Pasien : <?php echo $patient['nama_pasien'] ?> </h3>
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="#">Medical Record</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">List Medical Record</li>
+                            <li class="breadcrumb-item"><a href="patient.php">Pasien</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Data Rekam medis</li>
                         </ol>
                     </nav>
                 </div>
@@ -46,10 +46,10 @@ if ($result_medical_record->num_rows > 0) {
                     <div class="card-body">
                         <div class="d-flex align-items-center mb-2">
                             <div class="wrapper d-flex align-items-center">
-                                <h4 class="card-title">List Medical Record</h4>
+                                <h4 class="card-title">Data Rekam Medis</h4>
                             </div>
                             <div class="wrapper ms-auto action-bar">
-                                <button class="btn btn-sm btn-gradient-primary" onclick="window.location.href='medical_record_add.php?id=<?php echo $patient['id'] ?>'"><i class="fa fa-book me-1"></i> Add Medical Record</button>
+                                <button class="btn btn-sm btn-gradient-primary" onclick="window.location.href='medical_record_add.php?id=<?php echo $patient['id'] ?>'"><i class="fa fa-book me-1"></i> Tambah Rekam Medis</button>
                             </div>
                         </div>
 
