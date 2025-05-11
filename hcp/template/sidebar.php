@@ -28,6 +28,12 @@
             </a>
         </li>
         <li class="nav-item">
+            <a class="nav-link" href="<?php echo base_url() ?>hcp/dashboard/role/role.php">
+                <span class="menu-title">Assign Role</span>
+                <i class="fa fa-shield menu-icon"></i>
+            </a>
+        </li>
+        <li class="nav-item">
             <a class="nav-link" data-bs-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
                 <span class="menu-title">Basic UI Elements</span>
                 <i class="menu-arrow"></i>

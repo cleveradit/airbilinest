@@ -1,20 +1,5 @@
 <?php include $_SERVER['DOCUMENT_ROOT'] . '/hcp/template/header.php'; ?>
-<?php
 
-use PHPMailer\PHPMailer\PHPMailer;
-
-use PHPMailer\PHPMailer\Exception;
-
-
-
-require $_SERVER['DOCUMENT_ROOT'] . 'PHPMailer/src/Exception.php';
-
-require $_SERVER['DOCUMENT_ROOT'] . 'PHPMailer/src/PHPMailer.php';
-
-require $_SERVER['DOCUMENT_ROOT'] . 'PHPMailer/src/SMTP.php';
-
-
-?>
 <div class="jq-toast-single jq-has-icon jq-icon-success" style="text-align: left; display: none;">
     <span class="jq-toast-loader jq-toast-loaded" style="-webkit-transition: width 2.6s ease-in; -o-transition: width 2.6s ease-in; transition: width 2.6s ease-in; background-color: #f96868;"></span>
     <span class="close-jq-toast-single">×</span>
@@ -38,7 +23,7 @@ require $_SERVER['DOCUMENT_ROOT'] . 'PHPMailer/src/SMTP.php';
                         <h6 class="font-weight-light">Signing up is easy. It only takes a few steps</h6>
                         <form method="POST" action="">
                             <div class="form-group">
-                                <input type="text" class="form-control form-control-lg" id="exampleInputUsername1" placeholder="name" name="username" required>
+                                <input type="text" class="form-control form-control-lg" id="exampleInputUsername1" placeholder="Name" name="username" required>
                             </div>
                             <div class="form-group">
                                 <input type="email" class="form-control form-control-lg" id="exampleInputEmail1" placeholder="Email" name="email" required>
@@ -164,13 +149,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
             // Jika email sudah terdaftar, tampilkan pesan error
 
-            echo '<div class="error-message">Email sudah terdaftar. Silakan gunakan email lain.</div>';
+            echo "<script>
+                            showDangerToast('Email already exist!');
+                        </script>;";
         } else {
 
             // Jika email belum terdaftar, simpan data pengguna baru
 
             $sql = "INSERT INTO users (username, email, password, profession, institution) VALUES ('$username', '$email', '$hashed_password', '$profession', '$institution')";
-
 
 
             if ($conn->query($sql)) {

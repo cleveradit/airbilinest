@@ -1,6 +1,6 @@
 <?php
 if (empty($_SESSION['user_id'])) {
-    echo "<script>window.location.href = '<?php echo base_url() ?>hcp/dashboard/auth/login.php';</script>";
+    echo "<script>window.location.href = '" . base_url() . "hcp/dashboard/auth/login.php';</script>";
     exit();
 }
 
