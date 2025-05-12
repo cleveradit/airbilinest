@@ -22,6 +22,12 @@
             </a>
         </li>
         <li class="nav-item">
+            <a class="nav-link" href="<?php echo base_url() ?>hcp/dashboard/worklist_px.php">
+                <span class="menu-title">Worklist</span>
+                <i class="fa fa-users menu-icon"></i>
+            </a>
+        </li>
+        <li class="nav-item">
             <a class="nav-link" href="<?php echo base_url() ?>hcp/dashboard/patient/patient.php">
                 <span class="menu-title">Patient</span>
                 <i class="fa fa-users menu-icon"></i>
