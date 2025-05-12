@@ -1,7 +1,18 @@
 <?php include include $_SERVER['DOCUMENT_ROOT'] . '/hcp/template/header.php'; ?>
 <?php
 
-$sql = "SELECT * FROM users";
+
+$institution = $_SESSION['institution'];
+$user_id = $_SESSION['user_id'];
+$where = '';
+if($_SESSION['role']=='Admin Institusi'){
+    $where = "WHERE (role != 'Super Admin' OR role IS NULL) AND institution = '$institution'";
+}
+if($_SESSION['role']=='Dokter'){
+    $where = "WHERE id = '$user_id'";
+}
+
+$sql = "SELECT * FROM users $where";
 $user_result = $conn->query($sql);
 $users = [];
 

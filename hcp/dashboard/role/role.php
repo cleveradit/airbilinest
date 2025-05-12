@@ -1,7 +1,12 @@
 <?php include include $_SERVER['DOCUMENT_ROOT'] . '/hcp/template/header.php'; ?>
 <?php
 
-$sql = "SELECT * FROM users ORDER BY created_at DESC";
+$where = '';
+if($_SESSION['role']=='Admin Institusi'){
+    $where = "WHERE (role != 'Super Admin' OR role IS NULL)";
+}
+
+$sql = "SELECT * FROM users $where ORDER BY created_at DESC";
 $user_result = $conn->query($sql);
 $users = [];
 
@@ -70,7 +75,9 @@ if ($user_result->num_rows > 0) {
                                                             <td>
                                                                 <select class="form-control btn-role" name="role" id="role" data-id="<?= $user['id'] ?>">
                                                                     <option value=""></option>
+                                                                    <?php if($_SESSION['role']=='Super Admin'){ ?>
                                                                     <option <?php echo $user['role']=='Super Admin' ? 'selected' : '' ?> value="Super Admin">Super Admin</option>
+                                                                    <?php } ?>
                                                                     <option <?php echo $user['role']=='Admin Instusi' ? 'selected' : '' ?> value="Admin Institusi">Admin Institusi</option>
                                                                     <option <?php echo $user['role']=='Dokter' ? 'selected' : '' ?> value="Dokter">Dokter</option>
                                                                 </select>
