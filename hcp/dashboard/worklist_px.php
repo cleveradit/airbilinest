@@ -164,7 +164,9 @@ if ($worklist_result->num_rows > 0) {
                                                         <tr>
                                                             <td><?= $index + 1 ?></td>
                                                             <td>
-                                                                <a href="rekam_medis/patient_pdf.php?id=<?= $worklist['id'] ?>" class="btn btn-xs btn-outline btn-outline-success me-1" title="Rekam Medis">
+                                                                
+                                                                <!-- view -->
+                                                                <a href="worklist_px_view.php?id=<?= $worklist['id'] ?>" class="btn btn-xs btn-outline btn-outline-success me-1" title="View Detail">
                                                                     <i class="fa fa-book"></i>
                                                                 </a>
                                                                 <a href="worklist_px_edit.php?id=<?= $worklist['id'] ?>" class="btn btn-xs btn-outline btn-outline-info me-1" title="Edit">

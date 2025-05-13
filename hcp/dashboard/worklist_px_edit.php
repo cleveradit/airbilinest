@@ -19,6 +19,12 @@ $sql = "SELECT worklist.*
 $result_worklist = $conn->query($sql);
 $worklist = $result_worklist->fetch_assoc();
 
+// echo "<pre>";
+// print_r($worklist);
+// print_r($worklist_id);
+// print_r($user);
+// echo "</pre>";
+// die();
 
 ?>
 <div class="container-scroller">
@@ -92,8 +98,8 @@ $worklist = $result_worklist->fetch_assoc();
                                         <div class="form-group col-lg-3 col-md-4 col-sm-6 col-12">
                                             <label for="jenis_kelamin">Jenis Kelamin</label>
                                             <select class="form-control" name="jenis_kelamin" id="jenis_kelamin">
-                                                <option <?php echo $worklist['jenis_kelamin'] == $users['id'] ? 'Perempuan' : '' ?> value="Perempuan">Perempuan</option>
-                                                <option <?php echo $worklist['jenis_kelamin'] == $users['id'] ? 'Laki-laki' : '' ?> value="Laki-laki">Laki-laki</option>
+                                                <option <?php echo $worklist['jenis_kelamin'] == 'Perempuan' ? 'selected' : '' ?> value="Perempuan">Perempuan</option>
+                                                <option <?php echo $worklist['jenis_kelamin'] == 'Laki-laki' ? 'selected' : '' ?> value="Laki-laki">Laki-laki</option>
                                             </select>
                                         </div>
 
@@ -141,6 +147,7 @@ $worklist = $result_worklist->fetch_assoc();
                                                 <option <?php echo $worklist['golongan_darah'] == 'B' ? 'selected' : '' ?> value="B">B</option>
                                                 <option <?php echo $worklist['golongan_darah'] == 'AB' ? 'selected' : '' ?> value="AB">AB</option>
                                                 <option <?php echo $worklist['golongan_darah'] == 'O' ? 'selected' : '' ?> value="O">O</option>
+                                                <option <?php echo $worklist['golongan_darah'] == 'Tidak Terisi' ? 'selected' : '' ?> value="Tidak Terisi">Tidak Terisi</option>
                                             </select>
                                         </div>
 
@@ -150,6 +157,7 @@ $worklist = $result_worklist->fetch_assoc();
                                             <select class="form-control" name="rhesus" id="rhesus" required>
                                                 <option <?php echo $worklist['rhesus'] == '+' ? 'selected' : '' ?> value="+">+</option>
                                                 <option <?php echo $worklist['rhesus'] == '-' ? 'selected' : '' ?> value="-">-</option>
+                                                <option <?php echo $worklist['rhesus'] == 'Tidak Terisi' ? 'selected' : '' ?> value="Tidak Terisi">Tidak Terisi</option>
                                             </select>
                                         </div>
                                     </div>
@@ -173,6 +181,7 @@ $worklist = $result_worklist->fetch_assoc();
                                             <select class="form-control" name="rhesus_ibu" id="rhesus_ibu" required>
                                                 <option <?php echo $worklist['rhesus_ibu'] == '+' ? 'selected' : '' ?> value="+">+</option>
                                                 <option <?php echo $worklist['rhesus_ibu'] == '-' ? 'selected' : '' ?> value="-">-</option>
+                                                <option <?php echo $worklist['rhesus_ibu'] == 'Tidak Terisi' ? 'selected' : '' ?> value="Tidak Terisi">Tidak Terisi</option>
                                             </select>
                                         </div>
 
@@ -184,6 +193,7 @@ $worklist = $result_worklist->fetch_assoc();
                                                 <option <?php echo $worklist['golongan_darah_ibu'] == 'B' ? 'selected' : '' ?> value="B">B</option>
                                                 <option <?php echo $worklist['golongan_darah_ibu'] == 'AB' ? 'selected' : '' ?> value="AB">AB</option>
                                                 <option <?php echo $worklist['golongan_darah_ibu'] == 'O' ? 'selected' : '' ?> value="O">O</option>
+                                                <option <?php echo $worklist['golongan_darah_ibu'] == 'Tidak Terisi' ? 'selected' : '' ?> value="Tidak Terisi">Tidak Terisi</option>
                                             </select>
                                         </div>
                                     </div>
@@ -215,6 +225,7 @@ $worklist = $result_worklist->fetch_assoc();
                                                 <option value=""></option>
                                                 <option <?php echo $worklist['eritema'] == 'Iya' ? 'selected' : '' ?> value="Iya">Iya</option>
                                                 <option <?php echo $worklist['eritema'] == 'Tidak' ? 'selected' : '' ?> value="Tidak">Tidak</option>
+                                                <option <?php echo $worklist['eritema'] == 'Tidak Terisi' ? 'selected' : '' ?> value="Tidak">Tidak Terisi</option>
                                             </select>
                                         </div>
 
@@ -231,6 +242,7 @@ $worklist = $result_worklist->fetch_assoc();
                                                 <option value=""></option>
                                                 <option <?php echo $worklist['status_hidrasi'] == 'Iya' ? 'selected' : '' ?> value="Iya">Iya</option>
                                                 <option <?php echo $worklist['status_hidrasi'] == 'Tidak' ? 'selected' : '' ?> value="Tidak">Tidak</option>
+                                                <option <?php echo $worklist['status_hidrasi'] == 'Tidak Terisi' ? 'selected' : '' ?> value="Tidak">Tidak Terisi</option>
                                             </select>
                                         </div>
 
