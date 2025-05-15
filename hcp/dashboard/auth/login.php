@@ -82,7 +82,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             echo "<script>
                         showSuccessToast('Login success!');
                         setTimeout(function() {
-                            window.location.href = '".base_url()."hcp/dashboard/home/home.php';
+                            window.location.href = '".base_url()."hcp/dashboard/home.php';
                         }, 2600); // 2.6 detik = 2600 ms
                     </script>;";
 

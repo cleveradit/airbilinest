@@ -1,4 +1,4 @@
-<?php include include $_SERVER['DOCUMENT_ROOT'] . '/hcp/template/header.php'; ?>
+<?php include $_SERVER['DOCUMENT_ROOT'] . '/hcp/template/header.php'; ?>
 <?php
 
 $sql = "SELECT * FROM users";
@@ -19,21 +19,14 @@ $sql = "SELECT worklist.*
 $result_worklist = $conn->query($sql);
 $worklist = $result_worklist->fetch_assoc();
 
-// echo "<pre>";
-// print_r($worklist);
-// print_r($worklist_id);
-// print_r($user);
-// echo "</pre>";
-// die();
-
 ?>
 <div class="container-scroller">
     <!-- Sidebar -->
-    <?php include include $_SERVER['DOCUMENT_ROOT'] . '/hcp/template/navbar.php'; ?>
+    <?php include $_SERVER['DOCUMENT_ROOT'] . '/hcp/template/navbar.php'; ?>
 
     <div class="container-fluid page-body-wrapper">
         <!-- Navbar -->
-        <?php include include $_SERVER['DOCUMENT_ROOT'] . '/hcp/template/sidebar.php'; ?>
+        <?php include $_SERVER['DOCUMENT_ROOT'] . '/hcp/template/sidebar.php'; ?>
 
         <!-- Main Content Start -->
         <div class="main-panel">
@@ -107,6 +100,16 @@ $worklist = $result_worklist->fetch_assoc();
                                         <div class="form-group col-lg-3 col-md-4 col-sm-6 col-12">
                                             <label for="berat_lahir">Berat Lahir</label>
                                             <input value="<?php echo $worklist['berat_lahir'] ?>" type="text" name="berat_lahir" class="form-control" id="berat_lahir" value="<?php echo $worklist['berat_lahir'] ?>" required>
+                                        </div>
+
+                                        <!-- Status Berat Lahir (ditambahkan) -->
+                                        <div class="form-group col-lg-3 col-md-4 col-sm-6 col-12">
+                                            <label for="status_berat_lahir">Status Berat Lahir</label>
+                                            <select class="form-control" name="status_berat_lahir" id="status_berat_lahir">
+                                                <option value="Berat Badan Normal" <?= isset($worklist['status_berat_lahir']) && $worklist['status_berat_lahir'] == 'Berat Badan Normal' ? 'selected' : '' ?>>Berat Badan Normal</option>
+                                                <option value="Berat Badan Lahir Rendah" <?= isset($worklist['status_berat_lahir']) && $worklist['status_berat_lahir'] == 'Berat Badan Lahir Rendah' ? 'selected' : '' ?>>Berat Badan Lahir Rendah</option>
+                                                <option value="Makrosomia" <?= isset($worklist['status_berat_lahir']) && $worklist['status_berat_lahir'] == 'Makrosomia' ? 'selected' : '' ?>>Makrosomia</option>
+                                            </select>
                                         </div>
 
                                         <!-- Tanggal Lahir -->
@@ -393,7 +396,7 @@ $worklist = $result_worklist->fetch_assoc();
         <!-- main-panel ends -->
     </div>
 
-    <?php include include $_SERVER['DOCUMENT_ROOT'] . '/hcp/template/footer.php'; ?>
+    <?php include $_SERVER['DOCUMENT_ROOT'] . '/hcp/template/footer.php'; ?>
 
     <?php
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -406,6 +409,7 @@ $worklist = $result_worklist->fetch_assoc();
         $nama_pasien = $_POST['nama_pasien'];
         $jenis_kelamin = $_POST['jenis_kelamin'];
         $berat_lahir = $_POST['berat_lahir'];
+        $status_berat_lahir = $_POST['status_berat_lahir'];
         $tanggal_lahir = $_POST['tanggal_lahir'];
         $alamat = $_POST['alamat'];
         $umur_kehamilan = $_POST['umur_kehamilan'];
@@ -451,6 +455,7 @@ $worklist = $result_worklist->fetch_assoc();
                 nama_pasien = '$nama_pasien',
                 jenis_kelamin = '$jenis_kelamin',
                 berat_lahir = '$berat_lahir',
+                status_berat_lahir = '$status_berat_lahir',
                 tanggal_lahir = '$tanggal_lahir',
                 alamat = '$alamat',
                 umur_kehamilan = '$umur_kehamilan',

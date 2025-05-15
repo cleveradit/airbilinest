@@ -32,6 +32,7 @@ if ($worklist_result->num_rows > 0) {
         $worklists[] = $row;
     }
 }
+
 // Function to shorten text
 function shortenText($text, $length = 20) {
     if (strlen($text) > $length) {
@@ -53,10 +54,10 @@ function shortenText($text, $length = 20) {
         <div class="main-panel">
             <div class="content-wrapper">
                 <div class="page-header">
-                    <h3 class="page-title"> Worklist </h3>
+                    <h3 class="page-title"> Medical Records </h3>
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
-                            <li class="breadcrumb-item active" aria-current="page">Worklist</li>
+                            <li class="breadcrumb-item active" aria-current="page">Medical Records</li>
                         </ol>
                     </nav>
                 </div>
@@ -64,13 +65,9 @@ function shortenText($text, $length = 20) {
                     <div class="card-body">
                         <div class="d-flex align-items-center mb-2">
                             <div class="wrapper d-flex align-items-center">
-                                <h4 class="card-title">Worklist Pasien</h4>
-                            </div>
-                            <div class="wrapper ms-auto action-bar">
-                                <button class="btn btn-sm btn-gradient-primary" onclick="window.location.href='worklist_px_add.php'"><i class="fa fa-user me-1"></i> Tambah Pasien</button>
+                                <h4 class="card-title">Medical Records</h4>
                             </div>
                         </div>
-
                         <div class="row">
                             <div class="col-12">
                                 <div id="order-listing_wrapper" class="">

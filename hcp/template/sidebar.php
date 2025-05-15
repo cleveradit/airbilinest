@@ -16,8 +16,8 @@
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="<?php echo base_url() ?>hcp/dashboard/home/home.php">
-                <span class="menu-title">Dashboard</span>
+            <a class="nav-link" href="<?php echo base_url() ?>hcp/dashboard/home.php">
+                <span class="menu-title">Home</span>
                 <i class="mdi mdi-home menu-icon"></i>
             </a>
         </li>
@@ -28,8 +28,8 @@
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="<?php echo base_url() ?>hcp/dashboard/patient/patient.php">
-                <span class="menu-title">Patient</span>
+            <a class="nav-link" href="<?php echo base_url() ?>hcp/dashboard/medrec.php">
+                <span class="menu-title">Medical Records</span>
                 <i class="fa fa-users menu-icon"></i>
             </a>
         </li>

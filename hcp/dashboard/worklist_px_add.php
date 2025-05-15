@@ -1,6 +1,5 @@
-<?php include include $_SERVER['DOCUMENT_ROOT'] . '/hcp/template/header.php'; ?>
+<?php include $_SERVER['DOCUMENT_ROOT'] . '/hcp/template/header.php'; ?>
 <?php
-
 
 $institution = $_SESSION['institution'];
 $user_id = $_SESSION['user_id'];
@@ -11,11 +10,6 @@ if($_SESSION['role']=='Admin Institusi'){
 if($_SESSION['role']=='Dokter'){
     $where = "WHERE id = '$user_id'";
 }
-
-// echo "<pre>";
-// print_r($_SESSION['user_id']);
-// echo "</pre>";
-// die();
 
 $sql = "SELECT * FROM users $where";
 $user_result = $conn->query($sql);
@@ -30,11 +24,11 @@ if ($user_result->num_rows > 0) {
 ?>
 <div class="container-scroller">
     <!-- Sidebar -->
-    <?php include include $_SERVER['DOCUMENT_ROOT'] . '/hcp/template/navbar.php'; ?>
+    <?php include $_SERVER['DOCUMENT_ROOT'] . '/hcp/template/navbar.php'; ?>
 
     <div class="container-fluid page-body-wrapper">
         <!-- Navbar -->
-        <?php include include $_SERVER['DOCUMENT_ROOT'] . '/hcp/template/sidebar.php'; ?>
+        <?php include $_SERVER['DOCUMENT_ROOT'] . '/hcp/template/sidebar.php'; ?>
 
         <!-- Main Content Start -->
         <div class="main-panel">
@@ -43,7 +37,7 @@ if ($user_result->num_rows > 0) {
                     <h3 class="page-title"> Pasien </h3>
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="patient.php">Pasien</a></li>
+                            <li class="breadcrumb-item"><a href="worklist_px.php">Worklist</a></li>
                             <li class="breadcrumb-item active" aria-current="page">Tambah Pasien</li>
                         </ol>
                     </nav>
@@ -60,13 +54,21 @@ if ($user_result->num_rows > 0) {
                                 <form id="Formdata" method="POST" action="">
                                     <div class="row">
 
-                                        <!-- Dokter -->
-                                        <div class="form-group d-none">
+                                    <p class="text-light bg-dark ps-1 text-center">IDENTITAS AWAL</h3>
+                                    
+                                        <!-- Dokter (ditampilkan dan bisa dipilih) -->
+                                        <div class="form-group col-lg-3 col-md-4 col-sm-6 col-12">
                                             <label for="user_id">Dokter</label>
-                                            <input type="hidden" name="user_id" class="form-control" id="user_id" value="<?php echo $_SESSION['user_id'] ?>" required>
+                                            <select class="form-control" name="user_id" id="user_id" required>
+                                                <?php foreach ($users as $user): ?>
+                                                    <option value="<?= $user['id'] ?>" <?= ($user['id'] == $_SESSION['user_id']) ? 'selected' : '' ?>>
+                                                        <?= $user['username'] ?>
+                                                    </option>
+                                                <?php endforeach; ?>
+                                            </select>
                                         </div>
 
-                                        <p class="text-light bg-dark ps-1 text-center">IDENTITAS, WAKTU, DAN TEMPAT STUDI</h3>
+                                        
 
                                         <!-- Nama Pasien -->
                                         <div class="form-group col-lg-3 col-md-4 col-sm-6 col-12">
@@ -113,6 +115,16 @@ if ($user_result->num_rows > 0) {
                                             <input type="date" name="tanggal_lahir" class="form-control" id="tanggal_lahir" required>
                                         </div>
 
+                                        <!-- Status Berat Lahir (ditambahkan) -->
+                                        <div class="form-group col-lg-3 col-md-4 col-sm-6 col-12">
+                                            <label for="status_berat_lahir">Status Berat Lahir</label>
+                                            <select class="form-control" name="status_berat_lahir" id="status_berat_lahir">
+                                                <option value="Berat Badan Normal">Berat Badan Normal</option>
+                                                <option value="Berat Badan Lahir Rendah">Berat Badan Lahir Rendah</option>
+                                                <option value="Makrosomia">Makrosomia</option>
+                                            </select>
+                                        </div>
+
                                     </div>
                                     <div class="d-flex justify-content-end">
                                         <button class="btn btn-md btn-gradient-success" type="submit">Save</button>
@@ -136,7 +148,7 @@ if ($user_result->num_rows > 0) {
         <!-- main-panel ends -->
     </div>
 
-    <?php include include $_SERVER['DOCUMENT_ROOT'] . '/hcp/template/footer.php'; ?>
+    <?php include $_SERVER['DOCUMENT_ROOT'] . '/hcp/template/footer.php'; ?>
 
     <?php
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -149,6 +161,7 @@ if ($user_result->num_rows > 0) {
         $waktu_ambil_data = $_POST['waktu_ambil_data'];
         $jenis_kelamin = $_POST['jenis_kelamin'];
         $tanggal_lahir = $_POST['tanggal_lahir'];
+        $status_berat_lahir = $_POST['status_berat_lahir'];
 
         $sql_worklist = "INSERT INTO worklist (
             user_id,
@@ -158,7 +171,8 @@ if ($user_result->num_rows > 0) {
             tanggal_ambil_data,
             waktu_ambil_data,
             jenis_kelamin,
-            tanggal_lahir
+            tanggal_lahir,
+            status_berat_lahir
         ) VALUES (
             '$user_id',
             '$nama_pasien',
@@ -167,7 +181,8 @@ if ($user_result->num_rows > 0) {
             '$tanggal_ambil_data',
             '$waktu_ambil_data',
             '$jenis_kelamin',
-            '$tanggal_lahir'
+            '$tanggal_lahir',
+            '$status_berat_lahir'
         )";
 
         if ($conn->query($sql_worklist) === TRUE) {
